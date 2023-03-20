@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!1 &256295182
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,9 +162,8 @@ GameObject:
   - component: {fileID: 256295186}
   - component: {fileID: 256295185}
   - component: {fileID: 256295184}
-  - component: {fileID: 256295187}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,21 +250,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256295182}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &256295187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256295182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33aabe1a2dec93349b06e6e5dc51bc06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
-  endOfPathInstruction: 0
-  speed: 10
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +380,7 @@ GameObject:
   - component: {fileID: 352835838}
   - component: {fileID: 352835837}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!1 &716298311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!4 &793521529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1265291988836962504, guid: e3ee85beb404ae04aa63ac3e4f393911,
@@ -1574,12 +1558,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847591758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.36299992, z: 0.2488823}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.612119, y: 4.6121197, z: 4.6121197}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1678258752}
-  m_RootOrder: 4
+  m_Father: {fileID: 1227344357}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &847591760
 MonoBehaviour:
@@ -1593,6 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeb55aaae4d4d444bcdd6219fa24c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnitsInRange: []
 --- !u!54 &847591761
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1893,7 +1878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!1 &1051722387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +1968,39 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3887179727906971972, guid: c989303a22ef63945850330f4320a938, type: 3}
+--- !u!1 &1227344356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227344357}
+  m_Layer: 0
+  m_Name: BombCannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1227344357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227344356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36299992, z: 0.2488823}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1674205030}
+  - {fileID: 847591759}
+  m_Father: {fileID: 1678258752}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1282588909
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2096,89 +2114,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c24f7c2b4f4144393d0ecab1bdac50, type: 3}
---- !u!1 &1361388871
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1361388872}
-  - component: {fileID: 1361388874}
-  - component: {fileID: 1361388873}
-  m_Layer: 0
-  m_Name: Wheels
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1361388872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361388871}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5082327, y: 0.9706759, z: 0.36684704}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1674205030}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1361388873
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361388871}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 38aeb67870d50d2428fcc35edc5f6c6c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1361388874
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361388871}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1520606330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!1 &1674205029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,7 +2237,7 @@ GameObject:
   - component: {fileID: 1674205032}
   - component: {fileID: 1674205033}
   m_Layer: 0
-  m_Name: BombCannon
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2315,16 +2250,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674205029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7121, z: -24.55}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3491001, z: -24.798882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 352835836}
   - {fileID: 256295183}
-  - {fileID: 1361388872}
-  m_Father: {fileID: 1678258752}
-  m_RootOrder: 3
+  m_Father: {fileID: 1227344357}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1674205031
 BoxCollider:
@@ -2353,7 +2287,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 847591759}
   spawnPoint: {fileID: 256295183}
+  trajectoryRadius: {x: 0, y: 10, z: 0}
   trajectoryDetail: 20
+  BombPrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
+    type: 3}
 --- !u!120 &1674205033
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2483,8 +2420,7 @@ Transform:
   - {fileID: 1890867977}
   - {fileID: 619145486}
   - {fileID: 1972295403}
-  - {fileID: 1674205030}
-  - {fileID: 847591759}
+  - {fileID: 1227344357}
   m_Father: {fileID: 1051722388}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2779,7 +2715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007292d86746e4aaadd6e57d33fe14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCannon: {fileID: 1674205029}
+  bombCannon: {fileID: 1227344356}
 --- !u!1001 &7460853480812499954
 PrefabInstance:
   m_ObjectHideFlags: 0

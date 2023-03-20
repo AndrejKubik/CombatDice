@@ -8,10 +8,13 @@ public class BombCannon : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private Transform spawnPoint;
     private Vector3 center;
+    [SerializeField] private Vector3 trajectoryRadius;
 
     private LineRenderer trajectory;
     private Vector3[] trajectoryPoints;
     [SerializeField, Min(2)] private int trajectoryDetail;
+
+    public GameObject BombPrefab;
 
     private void Start()
     {
@@ -21,9 +24,16 @@ public class BombCannon : MonoBehaviour
 
     private void Update()
     {
-        //transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+        transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+        ShowAimTrajectory();
+
+        if(Input.GetKeyDown(KeyCode.Space)) LaunchProjectile();
+    }
+
+    private void ShowAimTrajectory()
+    {
         center = (target.position + spawnPoint.position) * 0.5f;
-        center -= Vector3.up;
+        center -= trajectoryRadius;
 
         for (int i = 0; i < trajectoryDetail; i++)
         {
@@ -34,5 +44,15 @@ public class BombCannon : MonoBehaviour
 
         trajectory.positionCount = trajectoryDetail;
         trajectory.SetPositions(trajectoryPoints);
+    }
+
+    private void LaunchProjectile()
+    {
+        GameObject projectile = Instantiate(BombPrefab, spawnPoint.position, spawnPoint.rotation);
+        AimedProjectile projectileData = projectile.GetComponent<AimedProjectile>();
+        projectileData.SpawnPoint = spawnPoint;
+        projectileData.Target = target;
+        projectileData.TrajectoryRadius = trajectoryRadius;
+        projectileData.ProjectileDataLoaded = true;
     }
 }

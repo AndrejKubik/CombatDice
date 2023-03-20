@@ -5,6 +5,7 @@ using UnityEngine;
 public class FighterCombat : MonoBehaviour
 {
     public bool PlayerTeam = true;
+    public bool Targeted;
 
     private void OnTriggerEnter(Collider other)
     {

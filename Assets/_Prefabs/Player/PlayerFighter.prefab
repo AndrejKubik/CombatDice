@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 4109634529513144792}
   - component: {fileID: 6610686121662376967}
   - component: {fileID: 8840929272888653173}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerFighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTeam: 1
+  Targeted: 0
 --- !u!1 &1665963377598761051
 GameObject:
   m_ObjectHideFlags: 0
