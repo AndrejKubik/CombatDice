@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RouletteBonus : MonoBehaviour
+public interface RouletteBonus
 {
-    
+    public void Activate();
 }

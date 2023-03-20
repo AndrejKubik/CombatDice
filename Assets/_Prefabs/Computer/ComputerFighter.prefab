@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFighter
       objectReference: {fileID: 0}
+    - target: {fileID: 1687287241382218602, guid: 27d4ce8ec7c60f140a88e71a5b598741,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b0793be125ee064899cc7483bcb3dea, type: 2}
     - target: {fileID: 3701678216524238829, guid: 27d4ce8ec7c60f140a88e71a5b598741,
         type: 3}
       propertyPath: m_RootOrder
