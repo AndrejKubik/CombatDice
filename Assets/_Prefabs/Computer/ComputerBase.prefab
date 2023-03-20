@@ -113,5 +113,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8af136d6550b4a428c729af08b17acf, type: 2}
+    - target: {fileID: 8915326384471158391, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_Name
+      value: ComputerWall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3ee85beb404ae04aa63ac3e4f393911, type: 3}

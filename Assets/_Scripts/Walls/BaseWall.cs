@@ -10,7 +10,7 @@ public class BaseWall : MonoBehaviour
 
         if(fighter)
         {
-            Debug.Log("Wall hit!");
+            Debug.Log(gameObject.name + "Wall hit!");
             Destroy(other.gameObject);
         }
     }
