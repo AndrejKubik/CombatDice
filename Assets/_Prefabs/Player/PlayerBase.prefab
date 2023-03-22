@@ -357,6 +357,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.861
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3fb5cd18962af46bfa6342a02af862, type: 3}
 --- !u!4 &9156001934684052306 stripped
