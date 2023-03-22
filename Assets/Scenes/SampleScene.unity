@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c491c70c609724a4a964ecc6cbb63753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplierPrefab: {fileID: 7197016387701404897, guid: 816fec278f573db4abcb1831ea0aaf69,
+  multiplierPrefab: {fileID: 7197016387701404897, guid: 9a5b6508b55bfea44b2af933787bdebe,
     type: 3}
 --- !u!1 &401819377
 GameObject:
@@ -1612,8 +1612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1674205030}
   - component: {fileID: 1674205031}
-  - component: {fileID: 1674205032}
   - component: {fileID: 1674205033}
+  - component: {fileID: 1674205034}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -1651,24 +1651,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5067484, y: 2.170465, z: 1}
   m_Center: {x: 0.00000023841858, y: 0.5971093, z: 0}
---- !u!114 &1674205032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674205029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7898a4435d614d64a92468698b9d0622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 847591759}
-  spawnPoint: {fileID: 256295183}
-  trajectoryRadius: {x: 0, y: 10, z: 0}
-  trajectoryDetail: 20
-  BombPrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
-    type: 3}
 --- !u!120 &1674205033
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1767,6 +1749,24 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1674205034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674205029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7898a4435d614d64a92468698b9d0622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 847591759}
+  spawnPoint: {fileID: 256295183}
+  trajectoryRadius: {x: 0, y: 10, z: 0}
+  trajectoryDetail: 20
+  BombPrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
+    type: 3}
 --- !u!1 &1678258751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c491c70c609724a4a964ecc6cbb63753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplierPrefab: {fileID: 7197016387701404897, guid: 816fec278f573db4abcb1831ea0aaf69,
+  multiplierPrefab: {fileID: 7197016387701404897, guid: 9a5b6508b55bfea44b2af933787bdebe,
     type: 3}
 --- !u!4 &543450653089468134 stripped
 Transform:
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c491c70c609724a4a964ecc6cbb63753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplierPrefab: {fileID: 7197016387701404897, guid: 816fec278f573db4abcb1831ea0aaf69,
+  multiplierPrefab: {fileID: 7197016387701404897, guid: 9a5b6508b55bfea44b2af933787bdebe,
     type: 3}
 --- !u!114 &8405973773742146703
 MonoBehaviour:

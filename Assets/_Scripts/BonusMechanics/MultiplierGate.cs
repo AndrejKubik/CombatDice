@@ -64,8 +64,9 @@ public class MultiplierGate : MonoBehaviour
             {
                 if (hit.transform.gameObject.layer == 6)
                 {
-                    transform.position = hit.point + Vector3.up;
-                    Roulette.instance.ReactivateBonusSelector();
+                    //transform.position = hit.point + Vector3.up;
+                    transform.position = new Vector3(hit.point.x, hit.point.y + transform.localScale.y * 0.55f, hit.point.z);
+                    Roulette.instance.ReactivateSpinOption();
                     placed = true;
                 }
             }

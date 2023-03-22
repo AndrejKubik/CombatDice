@@ -16,6 +16,11 @@ public class FighterMovement : MonoBehaviour
         RunForward();
     }
 
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
+
     private void RunForward()
     {
         transform.Translate(Vector3.forward * RunSpeed * Time.deltaTime);

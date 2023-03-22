@@ -45,7 +45,7 @@ public class Roulette : MonoBehaviour
 
             if (body.angularVelocity == Vector3.zero) //when the max slowing speed is reached
             {
-                Activator.enabled = true;
+                
                 rolling = false; //pretend that the rolling is stopped 
             }
         }
@@ -99,5 +99,9 @@ public class Roulette : MonoBehaviour
         //if the roulette is still spinning nice and fast, increase the slowing strength gradually  
     }
 
-    public void ReactivateBonusSelector() => Selector.gameObject.SetActive(true);
+    public void ReactivateSpinOption()
+    {
+        Selector.gameObject.SetActive(true);
+        Activator.enabled = true;
+    }
 }

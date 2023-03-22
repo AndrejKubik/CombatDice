@@ -54,7 +54,7 @@ public class BombCannon : MonoBehaviour
         projectileData.Target = target;
         projectileData.TrajectoryRadius = trajectoryRadius;
         projectileData.ProjectileDataLoaded = true;
-        gameObject.SetActive(false);
-        Roulette.instance.ReactivateBonusSelector();
+        transform.parent.gameObject.SetActive(false);
+        Roulette.instance.ReactivateSpinOption();
     }
 }
