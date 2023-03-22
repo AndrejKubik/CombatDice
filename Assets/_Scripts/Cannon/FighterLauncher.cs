@@ -8,7 +8,7 @@ public class FighterLauncher : MonoBehaviour
     public Transform SpawnPointsParent;
     private List<Transform> spawnPoints = new List<Transform>();
     public bool CanFire = true;
-    public float ReloadTime = 0.25f;
+    public float ReloadTime;
 
     private void Start()
     {

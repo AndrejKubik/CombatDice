@@ -20,15 +20,4 @@ public class FighterCombat : MonoBehaviour
             }
         }
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    FighterCombat fighter = collision.transform.GetComponent<FighterCombat>();
-
-    //    if (fighter != null && !fighter.PlayerTeam)
-    //    {
-    //        Destroy(fighter.gameObject);
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
