@@ -65,6 +65,7 @@ public class MultiplierGate : MonoBehaviour
                 if (hit.transform.gameObject.layer == 6)
                 {
                     transform.position = hit.point + Vector3.up;
+                    Roulette.instance.ReactivateBonusSelector();
                     placed = true;
                 }
             }

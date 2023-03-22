@@ -24,7 +24,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private float rollOverallSpeed;
     [SerializeField] private float minSpinSpeed;
 
-    [SerializeField] private RouletteSelector selector;
+    public RouletteSelector Selector;
     private bool bonusChosen = true;
 
     [SerializeField] private Collider Activator;
@@ -33,7 +33,7 @@ public class Roulette : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
 
-        if (!selector) Debug.LogError("Roulette selector not assigned!");
+        if (!Selector) Debug.LogError("Roulette selector not assigned!");
         if (!Activator) Debug.LogError("Activator not assigned!");
     }
 
@@ -91,11 +91,13 @@ public class Roulette : MonoBehaviour
 
             if(!bonusChosen)
             {
-                selector.ActivateTargetedBonus(); //activate the bonus below the selector
+                Selector.ActivateTargetedBonus(); //activate the bonus below the selector
                 bonusChosen = true;
             }
         }
         else body.angularDrag = Mathf.MoveTowards(body.angularDrag, maxSlowStrength, rollOverallSpeed * Time.deltaTime);
         //if the roulette is still spinning nice and fast, increase the slowing strength gradually  
     }
+
+    public void ReactivateBonusSelector() => Selector.gameObject.SetActive(true);
 }

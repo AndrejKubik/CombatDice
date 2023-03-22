@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 1317587420303519304}
   - component: {fileID: 1317587420303519310}
   m_Layer: 0
-  m_Name: rulet_2
+  m_Name: RouletteWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
