@@ -12,6 +12,8 @@ public class RouletteSelector : MonoBehaviour
     }
 
     [SerializeField] private Transform rayOrigin;
+    public Transform MultiplierSpawnPoint;
+
     public void ActivateTargetedBonus()
     {
         if (Physics.Raycast(rayOrigin.position, Vector3.down, out RaycastHit hit))

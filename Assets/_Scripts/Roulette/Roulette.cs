@@ -6,10 +6,18 @@ using DG.Tweening;
 [RequireComponent(typeof(Rigidbody))]
 public class Roulette : MonoBehaviour
 {
+    public static Roulette instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private Rigidbody body;
     private bool rolling;
     private bool accelerating;
     [SerializeField] private float maxSpinSpeed;
+    [SerializeField] private float slowSpinMaxSpeed;
     [SerializeField] private float spinAccelerationStrength;
     [SerializeField, Min(0.05f)] private float minSlowStrength = 0.05f;
     [SerializeField, Min(0.05f)] private float maxSlowStrength = 3f;
@@ -43,19 +51,25 @@ public class Roulette : MonoBehaviour
         }
     }
 
-    public void StartSpinning()
+    public void SpinNormally()
     {
         if (!rolling && !accelerating) //if the roulette is not currently spinning
         {
-            body.angularDrag = minSlowStrength; //reset the spin slowing strength
-            StartCoroutine(SpinAcceleration());
-            bonusChosen = false;
+            StartCoroutine(SpinAcceleration(maxSpinSpeed));
         }
     }
 
-    IEnumerator SpinAcceleration()
+    public void SpinSlowly()
     {
-        Vector3 targetVelocity = Vector3.up * maxSpinSpeed;
+        Activator.enabled = false;
+        rolling = false; //pretend that the rolling is stopped 
+        StartCoroutine(SpinAcceleration(slowSpinMaxSpeed));
+    }
+
+    IEnumerator SpinAcceleration(float maxSpeed)
+    {
+        body.angularDrag = minSlowStrength; //reset the spin slowing strength
+        Vector3 targetVelocity = Vector3.up * maxSpeed;
         accelerating = true;
 
         while (body.angularVelocity != targetVelocity)
@@ -66,6 +80,7 @@ public class Roulette : MonoBehaviour
 
         rolling = true; //let the update method know to start slowing the spin
         accelerating = false;
+        bonusChosen = false;
     }
 
     private void SlowTheSpin()

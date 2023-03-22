@@ -16,7 +16,7 @@ public class RouletteActivator : MonoBehaviour
 
     private void OnMouseDown()
     {
-        roulette.StartSpinning();
+        roulette.SpinNormally();
         activator.enabled = false;
     }
 }
