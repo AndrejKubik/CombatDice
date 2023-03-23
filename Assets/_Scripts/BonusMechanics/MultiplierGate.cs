@@ -62,18 +62,28 @@ public class MultiplierGate : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
             {
-                if (hit.transform.gameObject.layer == 6)
+                if (hit.transform.gameObject.layer == LayerController.instance.Ground)
                 {
-                    //transform.position = hit.point + Vector3.up;
-                    transform.position = new Vector3(hit.point.x, hit.point.y + transform.localScale.y * 0.55f, hit.point.z);
-                    Roulette.instance.ReactivateSpinOption();
-                    placed = true;
+                    Vector3 targetPosition = new Vector3(hit.point.x, hit.point.y + transform.localScale.y * 0.55f, hit.point.z);
+                    PlaceGate(targetPosition);
+                }
+                else if(hit.transform.gameObject.layer == LayerController.instance.Fighter)
+                {
+                    Vector3 targetPosition = new Vector3(hit.point.x, hit.transform.position.y + 0.55f, hit.point.z);
+                    PlaceGate(targetPosition);
                 }
             }
             else transform.position = startPosition;
 
             placementIndicator.gameObject.SetActive(false);
         }
+    }
+
+    private void PlaceGate(Vector3 targetPosition)
+    {
+        transform.position = targetPosition;
+        Roulette.instance.ReactivateSpinOption();
+        placed = true;
     }
 
     private Vector3 MouseWorldPosition()

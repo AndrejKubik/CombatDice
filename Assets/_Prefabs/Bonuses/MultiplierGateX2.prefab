@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b90a03fb1209a428ac35e2fbf08c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplierValue: 1
+  multiplierValue: 2
   dragHeightOffset: 3
   placementIndicator: {fileID: 454593349336712068}
 --- !u!1001 &5901075173725111965
@@ -245,6 +245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220949818130853433, guid: 43b1ce68a47fbb945a318140e8b54fa1,
+        type: 3}
+      propertyPath: m_text
+      value: +2
       objectReference: {fileID: 0}
     - target: {fileID: 4974043816638848876, guid: 43b1ce68a47fbb945a318140e8b54fa1,
         type: 3}

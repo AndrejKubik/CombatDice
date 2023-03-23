@@ -5,10 +5,16 @@ using UnityEngine;
 public class BombCannonTarget : MonoBehaviour
 {
     public List<GameObject> UnitsInRange;
+    [SerializeField] private BombCannon cannon;
 
     private void OnMouseDrag()
     {
         transform.position = new Vector3(MouseWorldPosition().x, transform.position.y, MouseWorldPosition().z);
+    }
+
+    private void OnMouseUp()
+    {
+        cannon.LaunchProjectile();
     }
 
     private Vector3 MouseWorldPosition()

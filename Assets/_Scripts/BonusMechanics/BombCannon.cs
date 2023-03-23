@@ -46,7 +46,7 @@ public class BombCannon : MonoBehaviour
         trajectory.SetPositions(trajectoryPoints);
     }
 
-    private void LaunchProjectile()
+    public void LaunchProjectile()
     {
         GameObject projectile = Instantiate(BombPrefab, spawnPoint.position, spawnPoint.rotation);
         AimedProjectile projectileData = projectile.GetComponent<AimedProjectile>();

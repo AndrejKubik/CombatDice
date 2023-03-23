@@ -773,6 +773,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1265291988836962504}
     m_Modifications:
+    - target: {fileID: 589691630136306015, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729303477625158800, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976190571486348654, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021379183089927153, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809125628979380288, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 5021288540971442804, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
       propertyPath: m_RootOrder
@@ -832,6 +857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917057903725931011, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161697808592877180, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
