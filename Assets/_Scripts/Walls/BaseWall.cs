@@ -4,14 +4,5 @@ using UnityEngine;
 
 public class BaseWall : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        FighterCombat fighter = other.GetComponent<FighterCombat>();
-
-        if(fighter)
-        {
-            Debug.Log(gameObject.name + "Wall hit!");
-            Destroy(other.gameObject);
-        }
-    }
+    [Min(0.1f)] public float WallDamage;
 }

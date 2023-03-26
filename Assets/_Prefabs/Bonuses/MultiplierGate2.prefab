@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -8890325556267127264}
   - component: {fileID: 325873233369548258}
   m_Layer: 0
-  m_Name: MultiplierGateX2
+  m_Name: MultiplierGate2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombCannonTarget : MonoBehaviour
+public class BonusCannonTarget : MonoBehaviour
 {
     public List<GameObject> UnitsInRange;
-    [SerializeField] private BombCannon cannon;
+    [SerializeField] private BonusCannon cannon;
 
     private void OnMouseDrag()
     {
@@ -27,7 +27,7 @@ public class BombCannonTarget : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 3)
+        if(other.gameObject.layer == LayerController.instance.Fighter)
         {
             FighterCombat fighter = other.GetComponent<FighterCombat>();
             if(!fighter.PlayerTeam) UnitsInRange.Add(other.gameObject);
@@ -36,7 +36,7 @@ public class BombCannonTarget : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 3)
+        if (other.gameObject.layer == LayerController.instance.Fighter)
         {
             FighterCombat fighter = other.GetComponent<FighterCombat>();
             if (!fighter.PlayerTeam) UnitsInRange.Remove(other.gameObject);

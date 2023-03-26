@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3611879501068787882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.38, z: 24.87}
   m_LocalScale: {x: 4.612119, y: 4.6121197, z: 4.6121197}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,10 +124,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3611879501068787882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeb55aaae4d4d444bcdd6219fa24c85, type: 3}
+  m_Script: {fileID: 11500000, guid: d942daa79c21b1943a3b325c08ed9dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UnitsInRange: []
+  cannon: {fileID: 3611879502431850126}
 --- !u!1 &3611879501714850079
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3611879502431850113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3491001, z: -24.798882}
+  m_LocalPosition: {x: 0, y: -1.0309, z: 0.07111931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -475,8 +476,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 3611879501819779307}
   trajectoryRadius: {x: 0, y: 10, z: 0}
   trajectoryDetail: 20
-  BombPrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
-    type: 3}
+  ProjectilePrefab: {fileID: 0}
 --- !u!1 &3611879502853607424
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3611879502853607425
 Transform:
   m_ObjectHideFlags: 0

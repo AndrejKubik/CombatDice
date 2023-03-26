@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Multiplier : MonoBehaviour, RouletteBonus
 {
-    [SerializeField] private GameObject multiplierPrefab;
-    private Transform spawnPoint;
+    [SerializeField] private BonusCannon bonusCannon;
+    [SerializeField] private GameObject projectilePrefab;
+    private enum MultiplierType { Multiplier2, Multiplier5 }
+    [SerializeField] private MultiplierType multiplierType;
 
     public void Activate()
     {
-        spawnPoint = RouletteSelector.instance.MultiplierSpawnPoint;
         RouletteSelector.instance.gameObject.SetActive(false);
-        Instantiate(multiplierPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        if (multiplierType == MultiplierType.Multiplier2) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier2Target);
+        else if (multiplierType == MultiplierType.Multiplier5) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier5Target);
     }
 }
