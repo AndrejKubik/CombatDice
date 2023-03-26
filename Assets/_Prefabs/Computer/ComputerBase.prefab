@@ -372,9 +372,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e32dbec04fb6a7f46a7b08999553f67d, type: 2}
     - target: {fileID: 4192184415460786691, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192184415460786691, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8bce7129e412c8469fa0e76caef7645, type: 2}
+    - target: {fileID: 4220693210046001761, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: PlayerCannon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4220693210046001761, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: FighterPrefab

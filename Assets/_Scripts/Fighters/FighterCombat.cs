@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FighterCombat : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class FighterCombat : MonoBehaviour
         {
             if(!fighter.PlayerTeam && PlayerTeam)
             {
+                other.transform.DOKill();
                 Destroy(other.gameObject);
+                transform.DOKill();
                 Destroy(gameObject);
             }
         }

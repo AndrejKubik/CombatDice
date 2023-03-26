@@ -5,25 +5,44 @@ using DG.Tweening;
 
 public class FighterMovement : MonoBehaviour
 {
+    public bool InEnemyBase;
+    public Transform AttackTarget;
+    public float AttackDuration;
+    public Ease AttackMovementCurve;
+
     public float RunSpeed = 10f;
+
     public bool Multiplied;
+    [SerializeField] private GameObject multiplyPrefab;
     [SerializeField, Range(0f, 1f)] private float multiplyDistance;
     [SerializeField, Range(0f, 1f)] private float multiplyRadius;
-    [SerializeField] private GameObject multiplyPrefab;
+
 
     private void Update()
     {
-        RunForward();
-    }
-
-    private void OnDisable()
-    {
-        transform.DOKill();
+        if (!InEnemyBase) RunForward();
+        else LockOnTarget();
     }
 
     private void RunForward()
     {
         transform.Translate(Vector3.forward * RunSpeed * Time.deltaTime);
+    }
+
+    private void LockOnTarget()
+    {
+        transform.LookAt(AttackTarget, Vector3.up);
+    }
+
+    public void AttackTheTarget()
+    {
+        King enemyKing = AttackTarget.GetComponent<King>();
+        transform.DOMove(AttackTarget.position, AttackDuration).SetEase(AttackMovementCurve)
+            .OnComplete(() =>
+        {
+            enemyKing.GetDamaged(1);
+            Destroy(gameObject);
+        });
     }
 
     public void Multiply(int multiplierNumber)

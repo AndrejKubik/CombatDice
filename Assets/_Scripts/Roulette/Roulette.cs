@@ -6,12 +6,14 @@ using DG.Tweening;
 [RequireComponent(typeof(Rigidbody))]
 public class Roulette : MonoBehaviour
 {
+    #region Singleton
     public static Roulette instance;
 
     private void Awake()
     {
         instance = this;
     }
+    #endregion
 
     private Rigidbody body;
     private bool rolling;
@@ -26,6 +28,7 @@ public class Roulette : MonoBehaviour
 
     public RouletteSelector Selector;
     private bool bonusChosen = true;
+    private int coinCount;
 
     [SerializeField] private Collider Activator;
 
@@ -45,7 +48,6 @@ public class Roulette : MonoBehaviour
 
             if (body.angularVelocity == Vector3.zero) //when the max slowing speed is reached
             {
-                
                 rolling = false; //pretend that the rolling is stopped 
             }
         }
@@ -55,8 +57,18 @@ public class Roulette : MonoBehaviour
     {
         if (!rolling && !accelerating) //if the roulette is not currently spinning
         {
-            StartCoroutine(SpinAcceleration(maxSpinSpeed));
+            if (coinCount > 0) //if the player has a coin for a spin
+            {
+                coinCount--; //spend a coin
+                StartCoroutine(SpinAcceleration(maxSpinSpeed)); //spin the wheel of fortune
+            }
+            else
+            {
+                Debug.Log("No coins left!");
+                ReactivateSpinOption();
+            }
         }
+        else Debug.Log("Hold on! What's the rush?");
     }
 
     public void SpinSlowly()
@@ -104,4 +116,6 @@ public class Roulette : MonoBehaviour
         Selector.gameObject.SetActive(true);
         Activator.enabled = true;
     }
+
+    public void GetACoin() => coinCount++;
 }

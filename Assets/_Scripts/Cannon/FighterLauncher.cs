@@ -9,6 +9,9 @@ public class FighterLauncher : MonoBehaviour
     private List<Transform> spawnPoints = new List<Transform>();
     public bool CanFire = true;
     public float ReloadTime;
+    public bool PlayerCannon;
+    public int CoinProgressGoal;
+    private int coinProgress;
 
     private void Start()
     {
@@ -24,6 +27,18 @@ public class FighterLauncher : MonoBehaviour
         while(CanFire)
         {
             SpawnFighters();
+
+            if(PlayerCannon)
+            {
+                if (coinProgress < CoinProgressGoal) coinProgress++;
+                else if (coinProgress >= CoinProgressGoal)
+                {
+                    Roulette.instance.GetACoin();
+                    coinProgress = 0;
+                    Debug.Log("Coin received!");
+                }
+            }
+
             yield return new WaitForSeconds(ReloadTime);
         }
     }
