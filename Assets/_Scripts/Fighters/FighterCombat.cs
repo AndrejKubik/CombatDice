@@ -8,6 +8,16 @@ public class FighterCombat : MonoBehaviour
     public bool PlayerTeam;
     public bool Targeted;
 
+    public Transform ParticleHolder;
+    public GameObject ClashParticlesPrefab;
+    public ParticleSystem ClashParticles;
+
+    private void Start()
+    {
+        GameObject newParticle = Instantiate(ClashParticlesPrefab, ParticleHolder.position, transform.rotation, ParticleHolder);
+        ClashParticles = newParticle.GetComponent<ParticleSystem>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         FighterCombat fighter = other.GetComponent<FighterCombat>();
@@ -16,11 +26,17 @@ public class FighterCombat : MonoBehaviour
         {
             if(!fighter.PlayerTeam && PlayerTeam)
             {
-                other.transform.DOKill();
-                Destroy(other.gameObject);
-                transform.DOKill();
-                Destroy(gameObject);
+                KillStickman(fighter);
+                KillStickman(this);
             }
         }
+    }
+
+    private void KillStickman(FighterCombat stickman)
+    {
+        stickman.transform.DOKill();
+        stickman.ClashParticles.Play();
+        stickman.ClashParticles.transform.SetParent(null);
+        Destroy(stickman.gameObject);
     }
 }

@@ -121,3 +121,5 @@ MonoBehaviour:
   projectileType: 2
   multiplierPrefab: {fileID: 7197016387701404897, guid: 816fec278f573db4abcb1831ea0aaf69,
     type: 3}
+  ImpactParticles: {fileID: 8301833540156111044, guid: 8edb6298458f4784c95270c4de320b1f,
+    type: 3}

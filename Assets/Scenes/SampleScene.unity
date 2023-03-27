@@ -1278,7 +1278,7 @@ Transform:
   m_GameObject: {fileID: 1520606330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13, y: 0.25865, z: 60}
+  m_LocalScale: {x: 11.99055, y: 0.25865, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1765830188}
@@ -1766,6 +1766,16 @@ PrefabInstance:
       propertyPath: selector
       value: 
       objectReference: {fileID: 1972295405}
+    - target: {fileID: 1317587420303519310, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
+        type: 3}
+      propertyPath: maxSpinFullSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317587420303519310, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
+        type: 3}
+      propertyPath: minSpinFullSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1317587420303519310, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
         type: 3}
       propertyPath: slowSpinMaxSpeed

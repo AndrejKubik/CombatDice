@@ -120,3 +120,5 @@ MonoBehaviour:
   ProjectileDataLoaded: 0
   projectileType: 1
   multiplierPrefab: {fileID: 0}
+  ImpactParticles: {fileID: 8301833540156111044, guid: 8edb6298458f4784c95270c4de320b1f,
+    type: 3}

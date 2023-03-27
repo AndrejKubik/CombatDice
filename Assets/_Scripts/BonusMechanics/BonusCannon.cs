@@ -24,10 +24,23 @@ public class BonusCannon : MonoBehaviour
 
     public GameObject ProjectilePrefab;
 
+    public GameObject SpawnParticlesPrefab;
+    public Transform ParticleHolder;
+    private ParticleSystem spawnParticles;
+
     private void Start()
     {
         trajectory = GetComponent<LineRenderer>();
         trajectoryPoints = new Vector3[trajectoryDetail];
+
+        GameObject newParticles = Instantiate(SpawnParticlesPrefab, ParticleHolder.position, transform.rotation, ParticleHolder);
+        spawnParticles = newParticles.GetComponent<ParticleSystem>();
+        spawnParticles.Play();
+    }
+
+    private void OnEnable()
+    {
+        if (spawnParticles) spawnParticles.Play();
     }
 
     private void Update()

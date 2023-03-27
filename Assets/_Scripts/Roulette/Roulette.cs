@@ -18,7 +18,10 @@ public class Roulette : MonoBehaviour
     private Rigidbody body;
     private bool rolling;
     private bool accelerating;
-    [SerializeField] private float maxSpinSpeed;
+    [SerializeField] private float maxSpinFullSpeed;
+    [SerializeField] private float minSpinFullSpeed;
+    private float spinFullSpeed;
+
     [SerializeField] private float slowSpinMaxSpeed;
     [SerializeField] private float spinAccelerationStrength;
     [SerializeField, Min(0.05f)] private float minSlowStrength = 0.05f;
@@ -28,7 +31,7 @@ public class Roulette : MonoBehaviour
 
     public RouletteSelector Selector;
     private bool bonusChosen = true;
-    private int coinCount;
+    private int coinCount = 1;
 
     [SerializeField] private Collider Activator;
 
@@ -60,7 +63,8 @@ public class Roulette : MonoBehaviour
             if (coinCount > 0) //if the player has a coin for a spin
             {
                 coinCount--; //spend a coin
-                StartCoroutine(SpinAcceleration(maxSpinSpeed)); //spin the wheel of fortune
+                float targetSpeed = RandomFullSpeed();
+                StartCoroutine(SpinAcceleration(targetSpeed)); //spin the wheel of fortune
             }
             else
             {
@@ -93,6 +97,11 @@ public class Roulette : MonoBehaviour
         rolling = true; //let the update method know to start slowing the spin
         accelerating = false;
         bonusChosen = false;
+    }
+
+    private float RandomFullSpeed()
+    {
+        return Random.Range(minSpinFullSpeed, maxSpinFullSpeed);
     }
 
     private void SlowTheSpin()
