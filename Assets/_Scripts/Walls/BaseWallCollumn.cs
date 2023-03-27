@@ -6,9 +6,11 @@ public class BaseWallCollumn : MonoBehaviour
 {
     private BaseWall wall;
     public Transform Bricks;
-    public GameObject DemolishParticlePrefab;
     public Transform ParticleHolder;
     private ParticleSystem demolishParticle;
+
+    [Header("Insert particle:")]
+    public GameObject DemolishParticlePrefab;
 
     private void Start()
     {

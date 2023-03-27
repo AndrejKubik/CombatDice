@@ -9,8 +9,10 @@ public class FighterCombat : MonoBehaviour
     public bool Targeted;
 
     public Transform ParticleHolder;
-    public GameObject ClashParticlesPrefab;
     public ParticleSystem ClashParticles;
+
+    [Header("Insert particle:")]
+    public GameObject ClashParticlesPrefab;
 
     private void Start()
     {

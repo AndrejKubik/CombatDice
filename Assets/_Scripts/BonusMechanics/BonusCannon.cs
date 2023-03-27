@@ -24,9 +24,11 @@ public class BonusCannon : MonoBehaviour
 
     public GameObject ProjectilePrefab;
 
-    public GameObject SpawnParticlesPrefab;
     public Transform ParticleHolder;
     private ParticleSystem spawnParticles;
+
+    [Header("Insert particle:")]
+    public GameObject SpawnParticlesPrefab;
 
     private void Start()
     {

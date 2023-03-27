@@ -22,8 +22,10 @@ public class AimedProjectile : MonoBehaviour
     [SerializeField] private ProjectileType projectileType;
     [SerializeField] private GameObject multiplierPrefab;
 
-    public GameObject ImpactParticles;
     private ParticleSystem impactParticles;
+
+    [Header("Insert particle:")]
+    public GameObject ImpactParticlesPrefab;
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class AimedProjectile : MonoBehaviour
         aimedPosition = Target.position;
         launchPosition = SpawnPoint.position;
 
-        GameObject newParticles = Instantiate(ImpactParticles, transform.position, transform.rotation, transform);
+        GameObject newParticles = Instantiate(ImpactParticlesPrefab, transform.position, transform.rotation, transform);
         impactParticles = newParticles.GetComponent<ParticleSystem>();
     }
 
