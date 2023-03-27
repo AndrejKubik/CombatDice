@@ -16,11 +16,14 @@ public class CannonBoost : MonoBehaviour, RouletteBonus
 
     IEnumerator ReloadBoost()
     {
-        float currentReload = playerCannon.ReloadTime;
+        float baseReload = playerCannon.ReloadTime;
+
+        playerCannon.ReloadBoostActive = true;
         playerCannon.ReloadTime *= boostedReloadDuration;
 
         yield return new WaitForSeconds(powerUpDuration);
 
-        playerCannon.ReloadTime = currentReload;
+        playerCannon.ReloadBoostActive = false;
+        playerCannon.ReloadTime = baseReload;
     }
 }

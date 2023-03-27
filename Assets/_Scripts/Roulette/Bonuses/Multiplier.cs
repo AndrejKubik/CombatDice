@@ -12,6 +12,8 @@ public class Multiplier : MonoBehaviour, RouletteBonus
     public void Activate()
     {
         RouletteSelector.instance.gameObject.SetActive(false);
+        bonusCannon.gameObject.SetActive(true);
+        Time.timeScale = 0.2f;
 
         if (multiplierType == MultiplierType.Multiplier2) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier2Target);
         else if (multiplierType == MultiplierType.Multiplier5) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier5Target);

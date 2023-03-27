@@ -11,6 +11,8 @@ public class AimedProjectile : MonoBehaviour
 
     public Transform SpawnPoint;
     public Transform Target;
+    private Vector3 aimedPosition;
+    private Vector3 launchPosition;
     public Vector3 TrajectoryRadius;
 
     private BonusCannonTarget targetMarker;
@@ -20,9 +22,17 @@ public class AimedProjectile : MonoBehaviour
     [SerializeField] private ProjectileType projectileType;
     [SerializeField] private GameObject multiplierPrefab;
 
+    public GameObject ImpactParticles;
+    private ParticleSystem impactParticles;
+
     private void Start()
     {
         targetMarker = Target.GetComponent<BonusCannonTarget>();
+        aimedPosition = Target.position;
+        launchPosition = SpawnPoint.position;
+
+        GameObject newParticles = Instantiate(ImpactParticles, transform.position, transform.rotation, transform);
+        impactParticles = newParticles.GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -36,12 +46,12 @@ public class AimedProjectile : MonoBehaviour
 
     private void FlyAlongTrajectory()
     {
-        currentDistance += Time.deltaTime;
+        currentDistance += Time.unscaledDeltaTime;
         t = currentDistance / ProjectileSpeed;
         t = Mathf.Clamp01(t);
-        trajectoryCenter = (SpawnPoint.position + Target.position) * 0.5f;
+        trajectoryCenter = (launchPosition + aimedPosition) * 0.5f;
         trajectoryCenter -= TrajectoryRadius;
-        Vector3 currentPosition = Vector3.Slerp(SpawnPoint.position - trajectoryCenter, Target.position - trajectoryCenter, t);
+        Vector3 currentPosition = Vector3.Slerp(launchPosition - trajectoryCenter, aimedPosition - trajectoryCenter, t);
         transform.position = currentPosition + trajectoryCenter;
     }
 
@@ -65,6 +75,9 @@ public class AimedProjectile : MonoBehaviour
                 PlaceMultiplier();
                 break;
         }
+
+        impactParticles.Play();
+        Time.timeScale = 1f;
     }
 
     private void Explode()
@@ -89,7 +102,7 @@ public class AimedProjectile : MonoBehaviour
 
     private void PlaceMultiplier()
     {
-        Instantiate(multiplierPrefab, targetMarker.transform.position, multiplierPrefab.transform.rotation);
+        Instantiate(multiplierPrefab, aimedPosition, multiplierPrefab.transform.rotation);
         Destroy(gameObject);
     }
 }

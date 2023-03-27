@@ -7,9 +7,12 @@ public class FighterLauncher : MonoBehaviour
     public GameObject FighterPrefab;
     public Transform SpawnPointsParent;
     private List<Transform> spawnPoints = new List<Transform>();
+    public bool PlayerCannon;
     public bool CanFire = true;
     public float ReloadTime;
-    public bool PlayerCannon;
+
+    public bool ReloadBoostActive;
+
     public int CoinProgressGoal;
     private int coinProgress;
 
@@ -28,7 +31,7 @@ public class FighterLauncher : MonoBehaviour
         {
             SpawnFighters();
 
-            if(PlayerCannon)
+            if(PlayerCannon && !ReloadBoostActive)
             {
                 if (coinProgress < CoinProgressGoal) coinProgress++;
                 else if (coinProgress >= CoinProgressGoal)

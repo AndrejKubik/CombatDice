@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class BaseWallTrigger : MonoBehaviour
 {
-    private BaseWallCollumn wallCollumn;
-
-    private void Start()
-    {
-        wallCollumn = transform.parent.GetComponent<BaseWallCollumn>();
-    }
+    public BaseWallCollumn WallCollumn;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +12,7 @@ public class BaseWallTrigger : MonoBehaviour
 
         if (fighter)
         {
-            wallCollumn.GetDamaged();
+            WallCollumn.GetDamaged();
             Destroy(other.gameObject);
         }
     }

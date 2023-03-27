@@ -5,14 +5,21 @@ using UnityEngine;
 public class BaseWallCollumn : MonoBehaviour
 {
     private BaseWall wall;
+    public Transform Bricks;
+    public GameObject DemolishParticlePrefab;
+    public Transform ParticleHolder;
+    private ParticleSystem demolishParticle;
 
     private void Start()
     {
         wall = transform.parent.GetComponent<BaseWall>();
+        GameObject newParticle = Instantiate(DemolishParticlePrefab, ParticleHolder.position, transform.rotation, ParticleHolder);
+        demolishParticle = newParticle.GetComponent<ParticleSystem>();
     }
 
     public void GetDamaged()
     {
-        transform.position += Vector3.down * wall.WallDamage;
+        if (demolishParticle) demolishParticle.Play();
+        Bricks.position += Vector3.down * wall.WallDamage;
     }
 }
