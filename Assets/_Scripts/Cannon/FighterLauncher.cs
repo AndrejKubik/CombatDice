@@ -15,6 +15,8 @@ public class FighterLauncher : MonoBehaviour
 
     public int CoinProgressGoal;
     private int coinProgress;
+    public CoinProgressBar ProgressBar;
+    private float progressBarSegment;
 
     private void Start()
     {
@@ -23,6 +25,8 @@ public class FighterLauncher : MonoBehaviour
             spawnPoints.Add(SpawnPointsParent.GetChild(i));
         }
 
+        //progressBarSegment = 1f / CoinProgressGoal;
+        progressBarSegment = 1f / (CoinProgressGoal + 1);
         StartCoroutine(FighterLaunching());
     }
     IEnumerator FighterLaunching()
@@ -33,13 +37,19 @@ public class FighterLauncher : MonoBehaviour
 
             if(PlayerCannon && !ReloadBoostActive)
             {
-                if (coinProgress < CoinProgressGoal) coinProgress++;
+                if (coinProgress < CoinProgressGoal)
+                {
+                    coinProgress++;
+                    
+                }
                 else if (coinProgress >= CoinProgressGoal)
                 {
                     Roulette.instance.GetACoin();
                     coinProgress = 0;
                     Debug.Log("Coin received!");
                 }
+
+                ProgressBar.AddProgress(progressBarSegment);
             }
 
             yield return new WaitForSeconds(ReloadTime);

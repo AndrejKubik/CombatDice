@@ -18,7 +18,7 @@ public class King : MonoBehaviour
         {
             currentHealth -= damage;
             if(currentHealth == 0) Debug.Log("King is dead!");
-            else Debug.Log("King hp: " + currentHealth);
+            //else Debug.Log("King hp: " + currentHealth);
         }
     }
 }
