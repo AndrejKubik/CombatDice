@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1729303477625158800
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3021379183089927153
 Transform:
   m_ObjectHideFlags: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
     type: 3}
   SpawnPointsParent: {fileID: 722642760382372548}
   CanFire: 1
-  ReloadTime: 1
+  ReloadTime: 0.5
 --- !u!1001 &7166275066646276677
 PrefabInstance:
   m_ObjectHideFlags: 0

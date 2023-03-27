@@ -130,11 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ea85d6bace13c42a69bd06f878f40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InEnemyBase: 0
+  AttackTarget: {fileID: 0}
+  AttackDuration: 0.5
+  AttackMovementCurve: 1
   RunSpeed: 2
   Multiplied: 0
+  multiplyPrefab: {fileID: 1618529815304381591}
   multiplyDistance: 0.6
   multiplyRadius: 1
-  multiplyPrefab: {fileID: 1618529815304381591}
 --- !u!114 &8840929272888653173
 MonoBehaviour:
   m_ObjectHideFlags: 0

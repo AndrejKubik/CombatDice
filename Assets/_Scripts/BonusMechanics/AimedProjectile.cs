@@ -13,12 +13,16 @@ public class AimedProjectile : MonoBehaviour
     public Transform Target;
     public Vector3 TrajectoryRadius;
 
-    private BombCannonTarget targetMarker;
+    private BonusCannonTarget targetMarker;
     public bool ProjectileDataLoaded;
+
+    public enum ProjectileType { Bomb, SuperBomb, Multiplier2, Multiplier5 }
+    [SerializeField] private ProjectileType projectileType;
+    [SerializeField] private GameObject multiplierPrefab;
 
     private void Start()
     {
-        targetMarker = Target.GetComponent<BombCannonTarget>();
+        targetMarker = Target.GetComponent<BonusCannonTarget>();
     }
 
     private void Update()
@@ -26,8 +30,7 @@ public class AimedProjectile : MonoBehaviour
         if (ProjectileDataLoaded)
         {
             FlyAlongTrajectory();
-
-            if (t >= 1f) Explode();
+            if (t >= 1f) ActivateEffect();
         }
     }
 
@@ -42,6 +45,28 @@ public class AimedProjectile : MonoBehaviour
         transform.position = currentPosition + trajectoryCenter;
     }
 
+    private void ActivateEffect()
+    {
+        switch(projectileType)
+        {
+            case ProjectileType.Bomb:
+                Explode();
+                break;
+
+            case ProjectileType.SuperBomb:
+                ExplodeSuper();
+                break;
+
+            case ProjectileType.Multiplier2:
+                PlaceMultiplier();
+                break;
+
+            case ProjectileType.Multiplier5:
+                PlaceMultiplier();
+                break;
+        }
+    }
+
     private void Explode()
     {
         for (int i = 0; i < targetMarker.UnitsInRange.Count; i++)
@@ -49,6 +74,22 @@ public class AimedProjectile : MonoBehaviour
             Destroy(targetMarker.UnitsInRange[i]);
         }
 
+        Destroy(gameObject);
+    }
+
+    private void ExplodeSuper()
+    {
+        for (int i = 0; i < targetMarker.UnitsInRange.Count; i++)
+        {
+            Destroy(targetMarker.UnitsInRange[i]);
+        }
+
+        Destroy(gameObject);
+    }
+
+    private void PlaceMultiplier()
+    {
+        Instantiate(multiplierPrefab, targetMarker.transform.position, multiplierPrefab.transform.rotation);
         Destroy(gameObject);
     }
 }
