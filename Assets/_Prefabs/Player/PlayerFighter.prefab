@@ -155,9 +155,9 @@ MonoBehaviour:
   PlayerTeam: 1
   Targeted: 0
   ParticleHolder: {fileID: 1365749068191312961}
-  ClashParticlesPrefab: {fileID: 8301833540156111044, guid: 8edb6298458f4784c95270c4de320b1f,
-    type: 3}
   ClashParticles: {fileID: 0}
+  ClashParticlesPrefab: {fileID: 7918198382008476152, guid: c78aa5dd69dba8a4cb11ae5eceb163cd,
+    type: 3}
 --- !u!1 &2967226585500521962
 GameObject:
   m_ObjectHideFlags: 0

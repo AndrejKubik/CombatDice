@@ -87,5 +87,11 @@ PrefabInstance:
       propertyPath: PlayerTeam
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8840929272888653173, guid: 27d4ce8ec7c60f140a88e71a5b598741,
+        type: 3}
+      propertyPath: ClashParticlesPrefab
+      value: 
+      objectReference: {fileID: 7828808623393378540, guid: 92fac33f2ef5c124cbb887dcd04ee005,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d4ce8ec7c60f140a88e71a5b598741, type: 3}
