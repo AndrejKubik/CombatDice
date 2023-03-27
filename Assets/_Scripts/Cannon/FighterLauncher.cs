@@ -18,6 +18,8 @@ public class FighterLauncher : MonoBehaviour
     public CoinProgressBar ProgressBar;
     private float progressBarSegment;
 
+    public Animator CannonAnimator;
+
     private void Start()
     {
         for (int i = 0; i < SpawnPointsParent.childCount; i++)
@@ -40,7 +42,6 @@ public class FighterLauncher : MonoBehaviour
                 if (coinProgress < CoinProgressGoal)
                 {
                     coinProgress++;
-                    
                 }
                 else if (coinProgress >= CoinProgressGoal)
                 {
@@ -58,6 +59,8 @@ public class FighterLauncher : MonoBehaviour
 
     private void SpawnFighters()
     {
+        CannonAnimator.PlayInFixedTime("FightetCannonFire", 0, 0f);
+
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             if(spawnPoints[i].gameObject.activeSelf)

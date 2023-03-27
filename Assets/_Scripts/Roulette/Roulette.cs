@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Roulette : MonoBehaviour
@@ -34,6 +35,7 @@ public class Roulette : MonoBehaviour
     private int coinCount = 1;
 
     [SerializeField] private Collider Activator;
+    public TextMeshProUGUI CoinCounter;
 
     private void Start()
     {
@@ -41,6 +43,8 @@ public class Roulette : MonoBehaviour
 
         if (!Selector) Debug.LogError("Roulette selector not assigned!");
         if (!Activator) Debug.LogError("Activator not assigned!");
+
+        CoinCounter.text = coinCount.ToString();
     }
 
     private void Update()
@@ -62,7 +66,7 @@ public class Roulette : MonoBehaviour
         {
             if (coinCount > 0) //if the player has a coin for a spin
             {
-                coinCount--; //spend a coin
+                SpendACoin();
                 float targetSpeed = RandomFullSpeed();
                 StartCoroutine(SpinAcceleration(targetSpeed)); //spin the wheel of fortune
             }
@@ -126,5 +130,15 @@ public class Roulette : MonoBehaviour
         Activator.enabled = true;
     }
 
-    public void GetACoin() => coinCount++;
+    public void GetACoin()
+    {
+        coinCount++;
+        CoinCounter.text = coinCount.ToString();
+    }
+
+    public void SpendACoin()
+    {
+        coinCount--;
+        CoinCounter.text = coinCount.ToString();
+    }
 }
