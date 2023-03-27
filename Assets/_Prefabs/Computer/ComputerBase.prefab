@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5243615915554224400}
     m_Modifications:
+    - target: {fileID: 230266983060162707, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 344261765034694792, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
     - target: {fileID: 457104292636977705, guid: 60cdb7975d458d9478fd880756016a66,
         type: 3}
       propertyPath: m_Name
@@ -87,11 +99,131 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1889528846357006534, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 2051028913366192460, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 2326466567728083437, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 2779250817227798275, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 2897130592004432209, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 4333197973941728753, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 4418861146606163550, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 4714915646033356707, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 5043363435262260162, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 5540446925852014194, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 5634683693027215056, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 6731957630076064973, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 6933356790278307527, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
     - target: {fileID: 7019606704865746391, guid: 60cdb7975d458d9478fd880756016a66,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7386651308457546404, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 7851630035346434910, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 7882261216510365506, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 8092544507144044763, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 8135254498053509260, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 8137032883912265199, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
+    - target: {fileID: 9123595274866984852, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: DemolishParticlePrefab
+      value: 
+      objectReference: {fileID: 6073546753478319844, guid: 465f84cd8dd2f8c4786aca068046b5a9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cdb7975d458d9478fd880756016a66, type: 3}
 --- !u!1 &2901192209332322970 stripped
@@ -451,6 +583,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e32dbec04fb6a7f46a7b08999553f67d, type: 2}
+    - target: {fileID: 5414725495181016585, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a729d9d493dfb547a5ce7f1f87101ba, type: 2}
     - target: {fileID: 5565177617974296264, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
