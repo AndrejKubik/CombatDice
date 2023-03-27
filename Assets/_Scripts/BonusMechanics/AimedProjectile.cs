@@ -46,7 +46,7 @@ public class AimedProjectile : MonoBehaviour
 
     private void FlyAlongTrajectory()
     {
-        currentDistance += Time.deltaTime;
+        currentDistance += Time.unscaledDeltaTime;
         t = currentDistance / ProjectileSpeed;
         t = Mathf.Clamp01(t);
         trajectoryCenter = (launchPosition + aimedPosition) * 0.5f;
@@ -77,6 +77,7 @@ public class AimedProjectile : MonoBehaviour
         }
 
         impactParticles.Play();
+        Time.timeScale = 1f;
     }
 
     private void Explode()
