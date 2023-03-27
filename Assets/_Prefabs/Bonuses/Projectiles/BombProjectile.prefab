@@ -114,7 +114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileSpeed: 0.75
-  SpawnPoint: {x: 0, y: 0, z: 0}
-  TargetPosition: {x: 0, y: 0, z: 0}
+  SpawnPoint: {fileID: 0}
+  Target: {fileID: 0}
   TrajectoryRadius: {x: 0, y: 0, z: 0}
   ProjectileDataLoaded: 0
+  projectileType: 0
+  multiplierPrefab: {fileID: 0}
+  ImpactParticles: {fileID: 8301833540156111044, guid: 8edb6298458f4784c95270c4de320b1f,
+    type: 3}
