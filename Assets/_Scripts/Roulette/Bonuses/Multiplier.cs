@@ -17,5 +17,14 @@ public class Multiplier : MonoBehaviour, RouletteBonus
 
         if (multiplierType == MultiplierType.Multiplier2) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier2Target);
         else if (multiplierType == MultiplierType.Multiplier5) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier5Target);
+
+        //if (multiplierType == MultiplierType.Multiplier2)
+        //{
+
+        //}
+        //else if (multiplierType == MultiplierType.Multiplier5)
+        //{
+
+        //}
     }
 }

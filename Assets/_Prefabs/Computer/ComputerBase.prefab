@@ -533,6 +533,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 770870309224550097, guid: 1f3dfaa9ebaea6846bb89a1569e8b9a9,
         type: 3}
+    - target: {fileID: 4220693210046001761, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: CannonAnimator
+      value: 
+      objectReference: {fileID: 810192878675572424}
+    - target: {fileID: 4244494006210203054, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_Name
+      value: CannonNew
+      objectReference: {fileID: 0}
     - target: {fileID: 4244494006210203054, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: m_IsActive
@@ -878,7 +888,33 @@ PrefabInstance:
     - target: {fileID: 1739710997062117636, guid: 56d5f09da861c7742875b01448455889,
         type: 3}
       propertyPath: m_Name
-      value: jeBEM TI MATER RADI 1
+      value: CannonNewComputer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d5f09da861c7742875b01448455889, type: 3}
+--- !u!1 &5489858388854883688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1739710997062117636, guid: 56d5f09da861c7742875b01448455889,
+    type: 3}
+  m_PrefabInstance: {fileID: 6056027518150814828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &810192878675572424
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489858388854883688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d12c1e26703e6c479ed1829082dd8b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
