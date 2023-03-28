@@ -1889,6 +1889,16 @@ PrefabInstance:
       propertyPath: CoinCounter
       value: 
       objectReference: {fileID: 1429061382}
+    - target: {fileID: 1317587421564653505, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317587421564653509, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1568303504354412938, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
         type: 3}
       propertyPath: m_RootOrder

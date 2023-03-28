@@ -17,7 +17,7 @@ public class Roulette : MonoBehaviour
     #endregion
 
     private Rigidbody body;
-    private bool rolling;
+    public bool Rolling;
     private bool accelerating;
     [SerializeField] private float maxSpinFullSpeed;
     [SerializeField] private float minSpinFullSpeed;
@@ -32,7 +32,7 @@ public class Roulette : MonoBehaviour
 
     public RouletteSelector Selector;
     private bool bonusChosen = true;
-    private int coinCount = 1;
+    private int coinCount = 0;
 
     [SerializeField] private Collider Activator;
     public TextMeshProUGUI CoinCounter;
@@ -49,32 +49,38 @@ public class Roulette : MonoBehaviour
 
     private void Update()
     {
-        if(rolling) //if the roulette is still spinning
+        if(Rolling) //if the roulette is still spinning
         {
             SlowTheSpin(); //constantly slow it down
 
             if (body.angularVelocity == Vector3.zero) //when the max slowing speed is reached
             {
-                rolling = false; //pretend that the rolling is stopped 
+                Rolling = false; //pretend that the rolling is stopped 
             }
         }
     }
 
     public void SpinNormally()
     {
-        if (!rolling && !accelerating) //if the roulette is not currently spinning
+        if (!Rolling && !accelerating) //if the roulette is not currently spinning
         {
-            if (coinCount > 0) //if the player has a coin for a spin
-            {
-                SpendACoin();
-                float targetSpeed = RandomFullSpeed();
-                StartCoroutine(SpinAcceleration(targetSpeed)); //spin the wheel of fortune
-            }
-            else
-            {
-                Debug.Log("No coins left!");
-                ReactivateSpinOption();
-            }
+            //if (coinCount > 0) //if the player has a coin for a spin
+            //{
+            //    SpendACoin();
+            //    float targetSpeed = RandomFullSpeed();
+            //    StartCoroutine(SpinAcceleration(targetSpeed)); //spin the wheel of fortune
+            //}
+            //else
+            //{
+            //    Debug.Log("No coins left!");
+            //    ReactivateSpinOption();
+            //}
+
+            //SpendACoin();
+
+            //DisableSpinning();
+            float targetSpeed = RandomFullSpeed();
+            StartCoroutine(SpinAcceleration(targetSpeed)); //spin the wheel of fortune
         }
         else Debug.Log("Hold on! What's the rush?");
     }
@@ -82,7 +88,7 @@ public class Roulette : MonoBehaviour
     public void SpinSlowly()
     {
         Activator.enabled = false;
-        rolling = false; //pretend that the rolling is stopped 
+        Rolling = false; //pretend that the rolling is stopped 
         StartCoroutine(SpinAcceleration(slowSpinMaxSpeed));
     }
 
@@ -98,7 +104,7 @@ public class Roulette : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        rolling = true; //let the update method know to start slowing the spin
+        Rolling = true; //let the update method know to start slowing the spin
         accelerating = false;
         bonusChosen = false;
     }
@@ -127,7 +133,15 @@ public class Roulette : MonoBehaviour
     public void ReactivateSpinOption()
     {
         Selector.gameObject.SetActive(true);
+        Activator.gameObject.SetActive(true);
         Activator.enabled = true;
+    }
+
+    public void DisableSpinning()
+    {
+        Selector.gameObject.SetActive(false);
+        Activator.gameObject.SetActive(false);
+        //Activator.enabled = false;
     }
 
     public void GetACoin()

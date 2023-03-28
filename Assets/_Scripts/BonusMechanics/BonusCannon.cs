@@ -79,7 +79,7 @@ public class BonusCannon : MonoBehaviour
         projectileData.TrajectoryRadius = trajectoryRadius;
         projectileData.ProjectileDataLoaded = true;
         transform.parent.gameObject.SetActive(false);
-        Roulette.instance.ReactivateSpinOption();
+        //Roulette.instance.ReactivateSpinOption();
         ActiveTarget.gameObject.SetActive(false);
         ToggleFighterLauncher(true);
     }

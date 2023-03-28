@@ -12,11 +12,15 @@ public class FighterLauncher : MonoBehaviour
     public float ReloadTime;
 
     public bool ReloadBoostActive;
+    public bool MultiplierBoostActive;
+
+    public float MultiplierDuration;
 
     public int CoinProgressGoal;
     private int coinProgress;
-    public CoinProgressBar ProgressBar;
+    public ProgressBar CoinProgressBar;
     private float progressBarSegment;
+    private bool spinCharged;
 
     public Animator CannonAnimator;
 
@@ -30,31 +34,6 @@ public class FighterLauncher : MonoBehaviour
         //progressBarSegment = 1f / CoinProgressGoal;
         progressBarSegment = 1f / (CoinProgressGoal + 1);
         StartCoroutine(FighterLaunching());
-    }
-    IEnumerator FighterLaunching()
-    {
-        while(CanFire)
-        {
-            SpawnFighters();
-
-            if(PlayerCannon && !ReloadBoostActive)
-            {
-                if (coinProgress < CoinProgressGoal)
-                {
-                    coinProgress++;
-                }
-                else if (coinProgress >= CoinProgressGoal)
-                {
-                    Roulette.instance.GetACoin();
-                    coinProgress = 0;
-                    Debug.Log("Coin received!");
-                }
-
-                ProgressBar.AddProgress(progressBarSegment);
-            }
-
-            yield return new WaitForSeconds(ReloadTime);
-        }
     }
 
     private void SpawnFighters()
@@ -70,11 +49,61 @@ public class FighterLauncher : MonoBehaviour
         }
     }
 
-    public void SwitchSpawnPoints(bool state, int count)
+    IEnumerator FighterLaunching()
     {
+        while(CanFire)
+        {
+            SpawnFighters();
+
+            if(PlayerCannon && !ReloadBoostActive && !MultiplierBoostActive && !Roulette.instance.Rolling)
+            {
+                if (coinProgress < CoinProgressGoal && !spinCharged)
+                {
+                    coinProgress++;
+                }
+                else if (coinProgress >= CoinProgressGoal)
+                {
+                    spinCharged = true;
+                    //Roulette.instance.GetACoin();
+                    Roulette.instance.ReactivateSpinOption();
+                    coinProgress = 0;
+                    CoinProgressBar.ResetProgress();
+                    //CoinProgressBar.gameObject.SetActive(false);
+                    //Debug.Log("Coin received!");
+                }
+
+                CoinProgressBar.AddProgress(progressBarSegment);
+            }
+
+            yield return new WaitForSeconds(ReloadTime);
+        }
+    }
+
+    public void ToggleSpawnPoints(int count)
+    {
+        //show bonus shots left bar
+        StartCoroutine(MultiSpawning(MultiplierDuration, count));
+    }
+
+    IEnumerator MultiSpawning(float duration, int count)
+    {
+        MultiplierBoostActive = true;
+
         for (int i = 1; i < count; i++)
         {
-            spawnPoints[i].gameObject.SetActive(state);
+            spawnPoints[i].gameObject.SetActive(true);
         }
+
+        yield return new WaitForSeconds(duration);
+
+        for (int i = 1; i < count; i++)
+        {
+            spawnPoints[i].gameObject.SetActive(false);
+        }
+
+        MultiplierBoostActive = false;
+        CoinProgressBar.gameObject.SetActive(true);
+        spinCharged = false;
+        //Roulette.instance.ReactivateSpinOption();
     }
 }

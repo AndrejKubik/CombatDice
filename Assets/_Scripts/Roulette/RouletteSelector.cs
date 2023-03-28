@@ -22,6 +22,7 @@ public class RouletteSelector : MonoBehaviour
             BonusSelectionEffects bonus = hit.collider.GetComponent<BonusSelectionEffects>();
             if (bonus) bonus.FlashBonus();
             hit.collider.GetComponent<RouletteBonus>().Activate();
+            Roulette.instance.DisableSpinning();
         }
     }
 }

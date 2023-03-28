@@ -23,11 +23,11 @@ public class Multiplier : MonoBehaviour, RouletteBonus
 
         if (multiplierType == MultiplierType.Multiplier2)
         {
-            bonusCannon.FighterLauncher.SwitchSpawnPoints(true, 3);
+            bonusCannon.FighterLauncher.ToggleSpawnPoints(3);
         }
         else if (multiplierType == MultiplierType.Multiplier5)
         {
-            bonusCannon.FighterLauncher.SwitchSpawnPoints(true, 5);
+            bonusCannon.FighterLauncher.ToggleSpawnPoints(5);
         }
     }
 }
