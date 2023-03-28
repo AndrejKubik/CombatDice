@@ -7,8 +7,7 @@ public class FighterMovement : MonoBehaviour
 {
     public bool InEnemyBase;
     public Transform AttackTarget;
-    public float AttackDuration;
-    public Ease AttackMovementCurve;
+    public float AttackMoveSpeed;
 
     public float RunSpeed = 10f;
 
@@ -36,13 +35,7 @@ public class FighterMovement : MonoBehaviour
 
     public void AttackTheTarget()
     {
-        King enemyKing = AttackTarget.GetComponent<King>();
-        transform.DOMove(AttackTarget.position, AttackDuration).SetEase(AttackMovementCurve)
-            .OnComplete(() =>
-        {
-            enemyKing.GetDamaged(1);
-            Destroy(gameObject);
-        });
+        StartCoroutine(MoveTowardsTarget(AttackTarget.transform, AttackMoveSpeed));
     }
 
     public void Multiply(int multiplierNumber)
@@ -74,5 +67,14 @@ public class FighterMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Multiplied = false;
+    }
+
+    IEnumerator MoveTowardsTarget(Transform target, float speed)
+    {
+        while(transform.position != target.position)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

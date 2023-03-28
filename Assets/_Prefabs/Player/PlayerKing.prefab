@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 2760010461610191301}
   - component: {fileID: 8316324342451047129}
   - component: {fileID: 448711600905941644}
+  - component: {fileID: 7124236542399634396}
   - component: {fileID: 6492347471722405413}
+  - component: {fileID: 8888082460579230151}
   m_Layer: 0
   m_Name: PlayerKing
   m_TagString: Untagged
@@ -94,12 +96,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5759683489422034475}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.83
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!54 &7124236542399634396
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759683489422034475}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &6492347471722405413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +131,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
+--- !u!95 &8888082460579230151
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759683489422034475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50a4788a406e7ed4fa295c32117eebd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &8347678832838153030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,6 +167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057596095818520375, guid: c3d1990af3cd00345a529e0620fa83ed,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5922
       objectReference: {fileID: 0}
     - target: {fileID: 4057596095818520375, guid: c3d1990af3cd00345a529e0620fa83ed,
         type: 3}
@@ -180,7 +223,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5898871708331843923, guid: c3d1990af3cd00345a529e0620fa83ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c3d1990af3cd00345a529e0620fa83ed, type: 3}
 --- !u!4 &5446984508246836337 stripped
 Transform:

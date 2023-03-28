@@ -494,8 +494,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
+      propertyPath: CannonAnimator
+      value: 
+      objectReference: {fileID: 1384078681108477249}
+    - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
       propertyPath: CoinProgressGoal
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 589691630136306015, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
@@ -649,6 +654,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3fb5cd18962af46bfa6342a02af862, type: 3}
+--- !u!95 &1384078681108477249 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2993389995976232039, guid: 0f3fb5cd18962af46bfa6342a02af862,
+    type: 3}
+  m_PrefabInstance: {fileID: 4233265371848014118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4220693210046001761 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,

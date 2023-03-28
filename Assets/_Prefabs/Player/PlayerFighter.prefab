@@ -133,8 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InEnemyBase: 0
   AttackTarget: {fileID: 0}
-  AttackDuration: 0.5
-  AttackMovementCurve: 1
+  AttackMoveSpeed: 2
   RunSpeed: 2
   Multiplied: 0
   multiplyPrefab: {fileID: 1618529815304381591}
