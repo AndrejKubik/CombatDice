@@ -6,7 +6,7 @@ using PathCreation;
 public class BonusCannon : MonoBehaviour
 {
     [SerializeField] private GameObject fighterCannonModel;
-    [SerializeField] private FighterLauncher fighterLauncher;
+    public FighterLauncher FighterLauncher;
 
     public Transform BombTarget;
     public Transform SuperBombTarget;
@@ -96,6 +96,6 @@ public class BonusCannon : MonoBehaviour
     private void ToggleFighterLauncher(bool state)
     {
         fighterCannonModel.SetActive(state);
-        fighterLauncher.enabled = state;
+        FighterLauncher.enabled = state;
     }
 }

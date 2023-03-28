@@ -12,19 +12,22 @@ public class Multiplier : MonoBehaviour, RouletteBonus
     public void Activate()
     {
         RouletteSelector.instance.gameObject.SetActive(false);
-        bonusCannon.gameObject.SetActive(true);
-        Time.timeScale = 0.2f;
 
-        if (multiplierType == MultiplierType.Multiplier2) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier2Target);
-        else if (multiplierType == MultiplierType.Multiplier5) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier5Target);
+        #region << Multiplying Gate Projectile System >>
+        //bonusCannon.gameObject.SetActive(true);
+        //Time.timeScale = 0.2f;
 
-        //if (multiplierType == MultiplierType.Multiplier2)
-        //{
+        //if (multiplierType == MultiplierType.Multiplier2) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier2Target);
+        //else if (multiplierType == MultiplierType.Multiplier5) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.Multiplier5Target);
+        #endregion
 
-        //}
-        //else if (multiplierType == MultiplierType.Multiplier5)
-        //{
-
-        //}
+        if (multiplierType == MultiplierType.Multiplier2)
+        {
+            bonusCannon.FighterLauncher.SwitchSpawnPoints(true, 3);
+        }
+        else if (multiplierType == MultiplierType.Multiplier5)
+        {
+            bonusCannon.FighterLauncher.SwitchSpawnPoints(true, 5);
+        }
     }
 }

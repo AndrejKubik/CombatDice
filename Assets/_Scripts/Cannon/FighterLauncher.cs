@@ -69,4 +69,12 @@ public class FighterLauncher : MonoBehaviour
             }
         }
     }
+
+    public void SwitchSpawnPoints(bool state, int count)
+    {
+        for (int i = 1; i < count; i++)
+        {
+            spawnPoints[i].gameObject.SetActive(state);
+        }
+    }
 }

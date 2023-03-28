@@ -773,6 +773,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3611879502431850126, guid: 672f8f030c7fec7439ce090743bb0216,
         type: 3}
+      propertyPath: FighterLauncher
+      value: 
+      objectReference: {fileID: 4220693210046001761}
+    - target: {fileID: 3611879502431850126, guid: 672f8f030c7fec7439ce090743bb0216,
+        type: 3}
       propertyPath: fighterLauncher
       value: 
       objectReference: {fileID: 4220693210046001761}
