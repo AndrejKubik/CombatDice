@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 1739710997062117636, guid: c488c174ef3f3ac418e2118c4c0d1c2e,
         type: 3}
       propertyPath: m_Name
-      value: jeBEM TI MATER RADI
+      value: CannonNew
       objectReference: {fileID: 0}
     - target: {fileID: 1739710997062117636, guid: c488c174ef3f3ac418e2118c4c0d1c2e,
         type: 3}
@@ -668,8 +668,18 @@ PrefabInstance:
       objectReference: {fileID: 1384078681108477249}
     - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
+      propertyPath: CoinProgressBar
+      value: 
+      objectReference: {fileID: 9010806367046130702}
+    - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
       propertyPath: CoinProgressGoal
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
+        type: 3}
+      propertyPath: MultiplierDuration
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 589691630136306015, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
@@ -868,6 +878,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4233265371848014118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9010806367046130702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5166548836451788072, guid: 0f3fb5cd18962af46bfa6342a02af862,
+    type: 3}
+  m_PrefabInstance: {fileID: 4233265371848014118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399a31ed21f2c6c40adff8e6202110fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9156001934684052306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021288540971442804, guid: 0f3fb5cd18962af46bfa6342a02af862,

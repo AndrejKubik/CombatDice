@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinProgressBar : MonoBehaviour
+public class ProgressBar : MonoBehaviour
 {
     public Image Fill;
     private float currentProgress;

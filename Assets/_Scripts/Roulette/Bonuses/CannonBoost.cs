@@ -11,7 +11,6 @@ public class CannonBoost : MonoBehaviour, RouletteBonus
     public void Activate()
     {
         StartCoroutine(ReloadBoost());
-        Roulette.instance.ReactivateSpinOption();
     }
 
     IEnumerator ReloadBoost()
@@ -25,5 +24,6 @@ public class CannonBoost : MonoBehaviour, RouletteBonus
 
         playerCannon.ReloadBoostActive = false;
         playerCannon.ReloadTime = baseReload;
+        //Roulette.instance.ReactivateSpinOption();
     }
 }
