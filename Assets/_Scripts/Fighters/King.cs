@@ -31,7 +31,11 @@ public class King : MonoBehaviour
         {
             currentHealth -= damage;
 
-            if (currentHealth == 0) Debug.Log("King is dead!");
+            if (currentHealth == 0)
+            {
+                Debug.Log("King is dead!");
+
+            }
             else if (currentHealth > 0) animator.PlayInFixedTime("KingDamage", 0, 0f);
             //else Debug.Log("King hp: " + currentHealth);
         }
