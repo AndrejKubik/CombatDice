@@ -37,8 +37,11 @@ public class FighterCombat : MonoBehaviour
     private void KillStickman(FighterCombat stickman)
     {
         stickman.transform.DOKill();
-        stickman.ClashParticles.Play();
-        stickman.ClashParticles.transform.SetParent(null);
+        if (stickman.ClashParticles)
+        {
+            stickman.ClashParticles.Play();
+            stickman.ClashParticles.transform.SetParent(null);
+        }
         Destroy(stickman.gameObject);
     }
 }

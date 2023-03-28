@@ -59,7 +59,7 @@ public class FighterLauncher : MonoBehaviour
 
     private void SpawnFighters()
     {
-        CannonAnimator.PlayInFixedTime("FightetCannonFire", 0, 0f);
+        CannonAnimator.PlayInFixedTime("FighterCannonFire", 0, 0f);
 
         for (int i = 0; i < spawnPoints.Count; i++)
         {

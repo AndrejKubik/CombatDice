@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2648322013122608155}
   - component: {fileID: 226391226588711121}
   m_Layer: 0
-  m_Name: jeBEM TI MATER RADI 1
+  m_Name: CannonNewPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 789707bb354a7b049bb7c8f4a2887e2c, type: 2}
+  - {fileID: 2100000, guid: 7a96e6bde7a5da3479239d84dae60245, type: 2}
   - {fileID: 7993982598810627253, guid: 2ec029089afbe824babfe2b8dd3de113, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0

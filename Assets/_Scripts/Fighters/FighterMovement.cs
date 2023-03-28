@@ -9,12 +9,21 @@ public class FighterMovement : MonoBehaviour
     public Transform AttackTarget;
     public float AttackMoveSpeed;
 
+    private float currentSpeed;
     public float RunSpeed = 10f;
+    public float LaunchSpeed = 13f;
+    public float SlowDownStrength = 1f;
 
     public bool Multiplied;
     [SerializeField] private GameObject multiplyPrefab;
     [SerializeField, Range(0f, 1f)] private float multiplyDistance;
     [SerializeField, Range(0f, 1f)] private float multiplyRadius;
+
+    private void Start()
+    {
+        currentSpeed = LaunchSpeed;
+        StartCoroutine(SpeedReducing());
+    }
 
 
     private void Update()
@@ -23,9 +32,18 @@ public class FighterMovement : MonoBehaviour
         else LockOnTarget();
     }
 
+    IEnumerator SpeedReducing()
+    {
+        while(currentSpeed > RunSpeed)
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, RunSpeed, SlowDownStrength * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
     private void RunForward()
     {
-        transform.Translate(Vector3.forward * RunSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
     }
 
     private void LockOnTarget()

@@ -853,6 +853,32 @@ Transform:
   m_Father: {fileID: 402202568}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907424197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4244494006210203054, guid: e3ee85beb404ae04aa63ac3e4f393911,
+    type: 3}
+  m_PrefabInstance: {fileID: 8841389186256966774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &907424201
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907424197}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d12c1e26703e6c479ed1829082dd8b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &923619000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2121,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220693210046001761, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: CannonAnimator
+      value: 
+      objectReference: {fileID: 907424201}
+    - target: {fileID: 4244494006210203054, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_Name
+      value: CannonNew
       objectReference: {fileID: 0}
     - target: {fileID: 6793279972027643016, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
