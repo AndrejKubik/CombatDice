@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d9fcfab82be1b3b4c976caf3eae79b86, type: 2}
+    - target: {fileID: 1668144514520752731, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1707191999883226483, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -492,6 +497,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e32dbec04fb6a7f46a7b08999553f67d, type: 2}
+    - target: {fileID: 3579420950931658516, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3643575945198948473, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -889,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonNewComputer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739710997062117636, guid: 56d5f09da861c7742875b01448455889,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d5f09da861c7742875b01448455889, type: 3}
