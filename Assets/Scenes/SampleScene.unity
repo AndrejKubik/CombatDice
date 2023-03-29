@@ -2377,6 +2377,10 @@ PrefabInstance:
       propertyPath: playerCannon
       value: 
       objectReference: {fileID: 811423109}
+    - target: {fileID: 2026945718, guid: 8a10c70050d7dd742b0977bb52f8c0f6, type: 3}
+      propertyPath: powerUpDuration
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1317587420303519310, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
         type: 3}
       propertyPath: Selector
@@ -3170,6 +3174,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8841389187805070111, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a0e5c73782c25444be71d1d8ce122ad, type: 2}
     - target: {fileID: 9010806367046130702, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: FillSpeed
