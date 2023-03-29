@@ -10,20 +10,8 @@ public class CannonBoost : MonoBehaviour, RouletteBonus
 
     public void Activate()
     {
-        StartCoroutine(ReloadBoost());
+        playerCannon.BoostFireRate(boostedReloadDuration, powerUpDuration);
     }
 
-    IEnumerator ReloadBoost()
-    {
-        float baseReload = playerCannon.ReloadTime;
-
-        playerCannon.ReloadBoostActive = true;
-        playerCannon.ReloadTime *= boostedReloadDuration;
-
-        yield return new WaitForSeconds(powerUpDuration);
-
-        playerCannon.ReloadBoostActive = false;
-        playerCannon.ReloadTime = baseReload;
-        //Roulette.instance.ReactivateSpinOption();
-    }
+    
 }

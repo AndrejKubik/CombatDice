@@ -18,7 +18,7 @@ public class Roulette : MonoBehaviour
 
     private Rigidbody body;
     public bool Rolling;
-    private bool accelerating;
+    public bool Accelerating;
     [SerializeField] private float maxSpinFullSpeed;
     [SerializeField] private float minSpinFullSpeed;
     private float spinFullSpeed;
@@ -62,7 +62,7 @@ public class Roulette : MonoBehaviour
 
     public void SpinNormally()
     {
-        if (!Rolling && !accelerating) //if the roulette is not currently spinning
+        if (!Rolling && !Accelerating) //if the roulette is not currently spinning
         {
             //if (coinCount > 0) //if the player has a coin for a spin
             //{
@@ -96,7 +96,7 @@ public class Roulette : MonoBehaviour
     {
         body.angularDrag = minSlowStrength; //reset the spin slowing strength
         Vector3 targetVelocity = Vector3.up * maxSpeed;
-        accelerating = true;
+        Accelerating = true;
 
         while (body.angularVelocity != targetVelocity)
         {
@@ -105,7 +105,7 @@ public class Roulette : MonoBehaviour
         }
 
         Rolling = true; //let the update method know to start slowing the spin
-        accelerating = false;
+        Accelerating = false;
         bonusChosen = false;
     }
 

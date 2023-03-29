@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     public Image Fill;
+    public Image Background;
     private float currentProgress;
     public float FillSpeed;
 
@@ -22,5 +23,28 @@ public class ProgressBar : MonoBehaviour
     {
         currentProgress = 0f;
         Fill.fillAmount = 0f;
+    }
+
+    public void FillOverDuration(float duration)
+    {
+        StartCoroutine(PowerUpTimer(duration));
+    }
+
+    IEnumerator PowerUpTimer(float duration)
+    {
+        Background.gameObject.SetActive(true);
+        Fill.gameObject.SetActive(true);
+        float fillSpeed = 1 / duration;
+
+        while (Fill.fillAmount < 1f)
+        {
+            Fill.fillAmount = Mathf.MoveTowards(Fill.fillAmount, 1, fillSpeed * Time.deltaTime);
+            Debug.Log(Fill.fillAmount);
+            yield return new WaitForEndOfFrame();
+        }
+
+        Fill.fillAmount = 0f;
+        Background.gameObject.SetActive(false);
+        Fill.gameObject.SetActive(false);
     }
 }

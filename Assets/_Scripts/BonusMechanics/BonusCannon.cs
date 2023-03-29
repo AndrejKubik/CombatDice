@@ -89,6 +89,7 @@ public class BonusCannon : MonoBehaviour
         ToggleFighterLauncher(false);
         transform.parent.gameObject.SetActive(true);
         ProjectilePrefab = projectilePrefab;
+        ProjectilePrefab.GetComponent<AimedProjectile>().PlayerCannon = FighterLauncher;
         target.gameObject.SetActive(true);
         ActiveTarget = target;
     }

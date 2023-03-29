@@ -16,6 +16,7 @@ public class AimedProjectile : MonoBehaviour
     public Vector3 TrajectoryRadius;
 
     private BonusCannonTarget targetMarker;
+    public FighterLauncher PlayerCannon;
     public bool ProjectileDataLoaded;
 
     public enum ProjectileType { Bomb, SuperBomb, Multiplier2, Multiplier5 }
@@ -80,6 +81,7 @@ public class AimedProjectile : MonoBehaviour
 
         impactParticles.Play();
         Time.timeScale = 1f;
+        PlayerCannon.ToggleCoinProgressBar(true);
     }
 
     private void Explode()
