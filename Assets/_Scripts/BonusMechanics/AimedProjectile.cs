@@ -34,8 +34,8 @@ public class AimedProjectile : MonoBehaviour
         aimedPosition = Target.position;
         launchPosition = SpawnPoint.position;
 
-        GameObject newParticles = Instantiate(ImpactParticlesPrefab, transform.position, transform.rotation, transform);
-        impactParticles = newParticles.GetComponent<ParticleSystem>();
+        //GameObject newParticles = Instantiate(ImpactParticlesPrefab, transform.position, transform.rotation, transform);
+        //impactParticles = newParticles.GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -60,7 +60,10 @@ public class AimedProjectile : MonoBehaviour
 
     private void ActivateEffect()
     {
-        switch(projectileType)
+        Vector3 particleSpawnPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        Instantiate(ImpactParticlesPrefab, particleSpawnPosition, transform.rotation);
+
+        switch (projectileType)
         {
             case ProjectileType.Bomb:
                 Explode();
@@ -78,10 +81,10 @@ public class AimedProjectile : MonoBehaviour
                 PlaceMultiplier();
                 break;
         }
-
-        impactParticles.Play();
+        
         Time.timeScale = 1f;
         PlayerCannon.ToggleCoinProgressBar(true);
+        CameraControl.instance.ToggleSlowMotion(false);
     }
 
     private void Explode()
@@ -90,7 +93,7 @@ public class AimedProjectile : MonoBehaviour
         {
             Destroy(targetMarker.UnitsInRange[i]);
         }
-
+        
         Destroy(gameObject);
     }
 

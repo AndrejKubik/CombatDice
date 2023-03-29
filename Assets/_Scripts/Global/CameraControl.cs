@@ -15,6 +15,7 @@ public class CameraControl : MonoBehaviour
     #endregion
 
     public CinemachineVirtualCamera SpinCamera;
+    public GameObject CameraEffect;
 
     public void ToggleSpinCamera(bool state)
     {
@@ -22,5 +23,10 @@ public class CameraControl : MonoBehaviour
         else if (state == false) SpinCamera.Priority = 0;
 
         Debug.Log("switch");
+    }
+
+    public void ToggleSlowMotion(bool state)
+    {
+        CameraEffect.SetActive(state);
     }
 }

@@ -644,6 +644,7 @@ MonoBehaviour:
   bonusCannon: {fileID: 0}
   projectilePrefab: {fileID: 3735840209029752217, guid: 3d362d79b6360694e90f6c9f8dcd3e23,
     type: 3}
+  SuperBomb: 0
 --- !u!1 &1994093698
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +759,7 @@ MonoBehaviour:
   bonusCannon: {fileID: 0}
   projectilePrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
     type: 3}
+  SuperBomb: 0
 --- !u!1 &414299927800524639
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +853,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414299927800524639}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -1057,7 +1059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1317587421564653510
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,7 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCannon: {fileID: 0}
   boostedReloadDuration: 0.2
-  powerUpDuration: 3
+  powerUpDuration: 2.5
 --- !u!114 &383553110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,6 +1510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d1d1449800de9419bb74001ef04f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rolling: 0
+  Accelerating: 0
   maxSpinFullSpeed: 30
   minSpinFullSpeed: 20
   slowSpinMaxSpeed: 5
@@ -1741,7 +1745,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3878047135862226911}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -1852,7 +1856,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5057451898707152372}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -1963,7 +1967,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5885742034863745133}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -2226,6 +2230,7 @@ MonoBehaviour:
   bonusCannon: {fileID: 0}
   projectilePrefab: {fileID: 3735840209029752217, guid: 3d362d79b6360694e90f6c9f8dcd3e23,
     type: 3}
+  SuperBomb: 1
 --- !u!114 &5229298420235692003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,7 +2337,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6603499081342211186}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -2465,6 +2470,7 @@ MonoBehaviour:
   bonusCannon: {fileID: 0}
   projectilePrefab: {fileID: 3735840209029752217, guid: 3a9e9a7198cd0a446a79412b310502f9,
     type: 3}
+  SuperBomb: 0
 --- !u!114 &8553403600763937477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,8 +2597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCannon: {fileID: 0}
-  boostedReloadDuration: 0.2
-  powerUpDuration: 3
+  boostedReloadDuration: 0.35
+  powerUpDuration: 1.5
 --- !u!114 &2026945723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2699,7 +2705,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9198313456766853178}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1

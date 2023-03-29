@@ -135,7 +135,7 @@ MonoBehaviour:
   AttackTarget: {fileID: 0}
   AttackMoveSpeed: 1
   RunSpeed: 1
-  LaunchSpeed: 7
+  LaunchSpeed: 9
   SlowDownStrength: 15
   Multiplied: 0
   multiplyPrefab: {fileID: 1618529815304381591}

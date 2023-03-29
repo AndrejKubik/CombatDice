@@ -86,6 +86,7 @@ public class BonusCannon : MonoBehaviour
 
     public void LoadCannon(GameObject projectilePrefab, Transform target)
     {
+        CameraControl.instance.ToggleSlowMotion(true);
         ToggleFighterLauncher(false);
         transform.parent.gameObject.SetActive(true);
         ProjectilePrefab = projectilePrefab;

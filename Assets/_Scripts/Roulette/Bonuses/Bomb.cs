@@ -6,6 +6,7 @@ public class Bomb : MonoBehaviour, RouletteBonus
 {
     [SerializeField] private BonusCannon bonusCannon;
     [SerializeField] private GameObject projectilePrefab;
+    public bool SuperBomb;
 
     public void Activate()
     {
@@ -13,6 +14,8 @@ public class Bomb : MonoBehaviour, RouletteBonus
         Time.timeScale = 0.2f;
         //RouletteSelector.instance.gameObject.SetActive(false);
         bonusCannon.gameObject.SetActive(true);
-        bonusCannon.LoadCannon(projectilePrefab, bonusCannon.BombTarget);
+        
+        if(SuperBomb) bonusCannon.LoadCannon(projectilePrefab, bonusCannon.SuperBombTarget);
+        else bonusCannon.LoadCannon(projectilePrefab, bonusCannon.BombTarget);
     }
 }

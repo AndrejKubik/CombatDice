@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3735840209029752217}
   m_LocalRotation: {x: 0.0000014603138, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.3625764, z: 1.1068377}
-  m_LocalScale: {x: 0.74305, y: 0.74305, z: 0.74305}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8985944235022391138}
   m_Father: {fileID: 0}
@@ -118,10 +118,11 @@ MonoBehaviour:
   SpawnPoint: {fileID: 0}
   Target: {fileID: 0}
   TrajectoryRadius: {x: 0, y: 0, z: 0}
+  PlayerCannon: {fileID: 0}
   ProjectileDataLoaded: 0
   projectileType: 0
   multiplierPrefab: {fileID: 0}
-  ImpactParticlesPrefab: {fileID: 8301833540156111044, guid: 8edb6298458f4784c95270c4de320b1f,
+  ImpactParticlesPrefab: {fileID: 432933237359887310, guid: 05f9920bb9a77034095523dd163dfaeb,
     type: 3}
 --- !u!1001 &8452602288992354742
 PrefabInstance:
