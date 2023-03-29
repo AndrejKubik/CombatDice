@@ -15,6 +15,7 @@ public class FighterLauncher : MonoBehaviour
     public bool MultiplierBoostActive;
 
     public float MultiplierDuration;
+    public ProgressBar PowerUpDurationBar;
 
     public int CoinProgressGoal;
     private int coinProgress;
@@ -54,25 +55,23 @@ public class FighterLauncher : MonoBehaviour
         while(CanFire)
         {
             SpawnFighters();
-
-            if(PlayerCannon && !ReloadBoostActive && !MultiplierBoostActive && !Roulette.instance.Rolling)
+            
+            if(PlayerCannon && !ReloadBoostActive && !MultiplierBoostActive && !Roulette.instance.Rolling && !Roulette.instance.Accelerating)
             {
                 if (coinProgress < CoinProgressGoal && !spinCharged)
                 {
                     coinProgress++;
+                    CoinProgressBar.AddProgress(progressBarSegment);
                 }
                 else if (coinProgress >= CoinProgressGoal)
                 {
-                    spinCharged = true;
                     //Roulette.instance.GetACoin();
                     Roulette.instance.ReactivateSpinOption();
                     coinProgress = 0;
                     CoinProgressBar.ResetProgress();
-                    //CoinProgressBar.gameObject.SetActive(false);
+                    ToggleCoinProgressBar(false);
                     //Debug.Log("Coin received!");
                 }
-
-                CoinProgressBar.AddProgress(progressBarSegment);
             }
 
             yield return new WaitForSeconds(ReloadTime);
@@ -88,6 +87,8 @@ public class FighterLauncher : MonoBehaviour
     IEnumerator MultiSpawning(float duration, int count)
     {
         MultiplierBoostActive = true;
+        PowerUpDurationBar.ToggleProgressBar(true);
+        PowerUpDurationBar.FillOverDuration(duration);
 
         for (int i = 1; i < count; i++)
         {
@@ -102,8 +103,36 @@ public class FighterLauncher : MonoBehaviour
         }
 
         MultiplierBoostActive = false;
-        CoinProgressBar.gameObject.SetActive(true);
-        spinCharged = false;
+        ToggleCoinProgressBar(true);
+        PowerUpDurationBar.ToggleProgressBar(false);
         //Roulette.instance.ReactivateSpinOption();
+    }
+
+    public void BoostFireRate(float boostReloadTime, float boostDuration)
+    {
+        StartCoroutine(ReloadBoost(boostReloadTime, boostDuration));
+    }
+
+    IEnumerator ReloadBoost(float boostReloadTime, float boostDuration)
+    {
+        PowerUpDurationBar.ToggleProgressBar(true);
+        float baseReload = ReloadTime;
+        PowerUpDurationBar.FillOverDuration(boostDuration);
+        ReloadBoostActive = true;
+        ReloadTime *= boostReloadTime;
+
+        yield return new WaitForSeconds(boostDuration);
+
+        ReloadBoostActive = false;
+        ReloadTime = baseReload;
+        ToggleCoinProgressBar(true);
+        PowerUpDurationBar.ToggleProgressBar(false);
+        //Roulette.instance.ReactivateSpinOption();
+    }
+
+    public void ToggleCoinProgressBar(bool state)
+    {
+        CoinProgressBar.gameObject.SetActive(state);
+        spinCharged = !state;
     }
 }
