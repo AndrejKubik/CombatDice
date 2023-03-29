@@ -132,14 +132,14 @@ public class Roulette : MonoBehaviour
 
     public void ReactivateSpinOption()
     {
-        Selector.gameObject.SetActive(true);
+        //Selector.gameObject.SetActive(true);
         Activator.gameObject.SetActive(true);
         Activator.enabled = true;
     }
 
     public void DisableSpinning()
     {
-        Selector.gameObject.SetActive(false);
+        //Selector.gameObject.SetActive(false);
         Activator.gameObject.SetActive(false);
         //Activator.enabled = false;
     }
