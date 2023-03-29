@@ -10,8 +10,7 @@ public class CannonBoost : MonoBehaviour, RouletteBonus
 
     public void Activate()
     {
+        CameraControl.instance.ToggleSpinCamera(false);
         playerCannon.BoostFireRate(boostedReloadDuration, powerUpDuration);
     }
-
-    
 }

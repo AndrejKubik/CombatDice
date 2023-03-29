@@ -29,7 +29,12 @@ public class BonusHighlighter : MonoBehaviour
     public void FlashChosenBonus()
     {
         animator.PlayInFixedTime("Flash", 0, 0f);
-        //animator.Play("Flash", 0, 0f);
+    }
+
+    public void FlashWholeWheel()
+    {
+        ShowAllHighlights();
+        animator.PlayInFixedTime("Flash", 0, 0f);
     }
 
     public void HideAllBonuses() //animation event
@@ -37,6 +42,14 @@ public class BonusHighlighter : MonoBehaviour
         for (int i = 0; i < bonuses.Count; i++)
         {
             bonuses[i].SetActive(false);
+        }
+    }
+
+    public void ShowAllHighlights()
+    {
+        for (int i = 0; i < bonuses.Count; i++)
+        {
+            bonuses[i].SetActive(true);
         }
     }
 }

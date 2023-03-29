@@ -44,7 +44,7 @@ public class Roulette : MonoBehaviour
         if (!Selector) Debug.LogError("Roulette selector not assigned!");
         if (!Activator) Debug.LogError("Activator not assigned!");
 
-        CoinCounter.text = coinCount.ToString();
+        //CoinCounter.text = coinCount.ToString();
     }
 
     private void Update()
