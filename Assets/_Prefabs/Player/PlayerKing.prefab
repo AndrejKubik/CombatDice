@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d2901406f04d54c880dce284908958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 10
 --- !u!95 &8888082460579230151
 Animator:
   serializedVersion: 5
@@ -143,7 +143,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 50a4788a406e7ed4fa295c32117eebd4, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 4057596095818520375, guid: c3d1990af3cd00345a529e0620fa83ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.228
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4057596095818520375, guid: c3d1990af3cd00345a529e0620fa83ed,
         type: 3}

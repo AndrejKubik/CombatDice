@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fill: {fileID: 5519612948761149929}
+  Background: {fileID: 0}
   FillSpeed: 0.005
 --- !u!1 &2849119930939230991
 GameObject:
@@ -1737,6 +1738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: King
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492347471722405413, guid: 3609df8f2a66c2647ab5a7c09467df69,
+        type: 3}
+      propertyPath: PlayerKing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3609df8f2a66c2647ab5a7c09467df69, type: 3}
