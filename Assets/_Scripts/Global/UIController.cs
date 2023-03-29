@@ -22,11 +22,12 @@ public class UIController : MonoBehaviour
 
     private void Start()
     {
-        if(FirstLoad)
+        if (FirstLoad)
         {
             ShowStartMenu();
             FirstLoad = false;
         }
+        else Time.timeScale = 1f;
     }
 
     public void ShowStartMenu()
@@ -60,7 +61,7 @@ public class UIController : MonoBehaviour
 
     public void ShowLoseMenu()
     {
-        LoseMenu.SetActive(false);
+        LoseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 }

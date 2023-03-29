@@ -70,6 +70,7 @@ public class FighterLauncher : MonoBehaviour
                     coinProgress = 0;
                     CoinProgressBar.ResetProgress();
                     ToggleCoinProgressBar(false);
+                    CameraControl.instance.ToggleSpinCamera(true);
                     //Debug.Log("Coin received!");
                 }
             }

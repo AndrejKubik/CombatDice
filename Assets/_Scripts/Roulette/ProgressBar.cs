@@ -35,9 +35,9 @@ public class ProgressBar : MonoBehaviour
         Fill.fillAmount = 0f;
         float fillSpeed = 1 / duration;
 
-        while (Fill.fillAmount < 1f)
+        while (Fill.fillAmount < 0.99f)
         {
-            Fill.fillAmount = Mathf.MoveTowards(Fill.fillAmount, 1, fillSpeed * Time.deltaTime);
+            Fill.fillAmount = Mathf.MoveTowards(Fill.fillAmount, 1f, fillSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
     }
