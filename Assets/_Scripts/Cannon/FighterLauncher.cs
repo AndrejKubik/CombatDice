@@ -87,6 +87,7 @@ public class FighterLauncher : MonoBehaviour
     IEnumerator MultiSpawning(float duration, int count)
     {
         MultiplierBoostActive = true;
+        PowerUpDurationBar.ToggleProgressBar(true);
         PowerUpDurationBar.FillOverDuration(duration);
 
         for (int i = 1; i < count; i++)
@@ -103,6 +104,7 @@ public class FighterLauncher : MonoBehaviour
 
         MultiplierBoostActive = false;
         ToggleCoinProgressBar(true);
+        PowerUpDurationBar.ToggleProgressBar(false);
         //Roulette.instance.ReactivateSpinOption();
     }
 
@@ -113,6 +115,7 @@ public class FighterLauncher : MonoBehaviour
 
     IEnumerator ReloadBoost(float boostReloadTime, float boostDuration)
     {
+        PowerUpDurationBar.ToggleProgressBar(true);
         float baseReload = ReloadTime;
         PowerUpDurationBar.FillOverDuration(boostDuration);
         ReloadBoostActive = true;
@@ -123,6 +126,7 @@ public class FighterLauncher : MonoBehaviour
         ReloadBoostActive = false;
         ReloadTime = baseReload;
         ToggleCoinProgressBar(true);
+        PowerUpDurationBar.ToggleProgressBar(false);
         //Roulette.instance.ReactivateSpinOption();
     }
 

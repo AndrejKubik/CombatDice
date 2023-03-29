@@ -32,8 +32,6 @@ public class ProgressBar : MonoBehaviour
 
     IEnumerator PowerUpTimer(float duration)
     {
-        Background.gameObject.SetActive(true);
-        Fill.gameObject.SetActive(true);
         float fillSpeed = 1 / duration;
 
         while (Fill.fillAmount < 1f)
@@ -44,7 +42,11 @@ public class ProgressBar : MonoBehaviour
         }
 
         Fill.fillAmount = 0f;
-        Background.gameObject.SetActive(false);
-        Fill.gameObject.SetActive(false);
+    }
+
+    public void ToggleProgressBar(bool state)
+    {
+        Background.gameObject.SetActive(state);
+        Fill.gameObject.SetActive(state);
     }
 }

@@ -2161,6 +2161,16 @@ PrefabInstance:
       propertyPath: Background
       value: 
       objectReference: {fileID: 1430240977}
+    - target: {fileID: 3575496821760634785, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118012164959732112, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4220693210046001761, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: CannonAnimator
