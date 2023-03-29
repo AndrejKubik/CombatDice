@@ -42,10 +42,12 @@ public class King : MonoBehaviour
                 if(PlayerKing)
                 {
                     Debug.Log("You Lose");
+                    UIController.instance.ShowLoseMenu();
                 }
                 else
                 {
                     Debug.Log("You Win");
+                    UIController.instance.ShowWinMenu();
                 }
             }
             else if (currentHealth > 0)
