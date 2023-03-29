@@ -32,12 +32,12 @@ public class ProgressBar : MonoBehaviour
 
     IEnumerator PowerUpTimer(float duration)
     {
-        Fill.fillAmount = 0f;
+        Fill.fillAmount = 1f;
         float fillSpeed = 1 / duration;
 
-        while (Fill.fillAmount < 0.99f)
+        while (Fill.fillAmount > 0.01f)
         {
-            Fill.fillAmount = Mathf.MoveTowards(Fill.fillAmount, 1f, fillSpeed * Time.deltaTime);
+            Fill.fillAmount = Mathf.MoveTowards(Fill.fillAmount, 0f, fillSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
     }

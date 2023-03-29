@@ -9,8 +9,9 @@ public class Bomb : MonoBehaviour, RouletteBonus
 
     public void Activate()
     {
+        CameraControl.instance.ToggleSpinCamera(false);
         Time.timeScale = 0.2f;
-        RouletteSelector.instance.gameObject.SetActive(false);
+        //RouletteSelector.instance.gameObject.SetActive(false);
         bonusCannon.gameObject.SetActive(true);
         bonusCannon.LoadCannon(projectilePrefab, bonusCannon.BombTarget);
     }

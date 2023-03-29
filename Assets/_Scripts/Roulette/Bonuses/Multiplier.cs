@@ -11,7 +11,8 @@ public class Multiplier : MonoBehaviour, RouletteBonus
 
     public void Activate()
     {
-        RouletteSelector.instance.gameObject.SetActive(false);
+        //RouletteSelector.instance.gameObject.SetActive(false);
+        CameraControl.instance.ToggleSpinCamera(false);
 
         #region << Multiplying Gate Projectile System >>
         //bonusCannon.gameObject.SetActive(true);

@@ -24,7 +24,6 @@ public class RouletteSelector : MonoBehaviour
             RouletteBonus bonusEffect = hit.collider.GetComponent<RouletteBonus>();
             bonusEffect.Activate();
             Roulette.instance.DisableSpinning();
-            CameraControl.instance.ToggleSpinCamera(false);
         }
     }
 }

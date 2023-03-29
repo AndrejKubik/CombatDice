@@ -66,6 +66,7 @@ public class FighterLauncher : MonoBehaviour
                 else if (coinProgress >= CoinProgressGoal)
                 {
                     //Roulette.instance.GetACoin();
+                    BonusHighlighter.instance.FlashWholeWheel();
                     Roulette.instance.ReactivateSpinOption();
                     coinProgress = 0;
                     CoinProgressBar.ResetProgress();
