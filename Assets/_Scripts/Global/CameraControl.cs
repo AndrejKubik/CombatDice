@@ -21,8 +21,6 @@ public class CameraControl : MonoBehaviour
     {
         if (state == true) SpinCamera.Priority = 2;
         else if (state == false) SpinCamera.Priority = 0;
-
-        Debug.Log("switch");
     }
 
     public void ToggleSlowMotion(bool state)

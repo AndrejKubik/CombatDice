@@ -28,6 +28,7 @@ public class FighterCombat : MonoBehaviour
         {
             if(!fighter.PlayerTeam && PlayerTeam)
             {
+                SoundManager.instance.PlayFighterSound();
                 KillStickman(fighter);
                 KillStickman(this);
             }

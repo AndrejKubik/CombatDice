@@ -18,11 +18,13 @@ public class RouletteSelector : MonoBehaviour
     {
         if (Physics.Raycast(rayOrigin.position, Vector3.down, out RaycastHit hit))
         {
-            Debug.Log(hit.collider.name);
             BonusSelectionEffects bonus = hit.collider.GetComponent<BonusSelectionEffects>();
             if (bonus) bonus.FlashBonus();
             RouletteBonus bonusEffect = hit.collider.GetComponent<RouletteBonus>();
             bonusEffect.Activate();
+
+            if(bonusEffect.GetType() != typeof(Separator)) SoundManager.instance.PlayBonusSound();
+
             Roulette.instance.DisableSpinning();
         }
     }

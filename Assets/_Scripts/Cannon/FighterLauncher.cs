@@ -40,6 +40,7 @@ public class FighterLauncher : MonoBehaviour
     private void SpawnFighters()
     {
         CannonAnimator.PlayInFixedTime("FighterCannonFire", 0, 0f);
+        if(PlayerCannon) SoundManager.instance.PlayCannonSound();
 
         for (int i = 0; i < spawnPoints.Count; i++)
         {

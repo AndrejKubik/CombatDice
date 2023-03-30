@@ -12,6 +12,7 @@ public class BaseWallTrigger : MonoBehaviour
 
         if (fighter)
         {
+            SoundManager.instance.PlayWallSound();
             WallCollumn.GetDamaged();
             Destroy(other.gameObject);
         }
