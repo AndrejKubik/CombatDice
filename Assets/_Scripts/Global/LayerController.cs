@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR 
 using UnityEditor;
+#endif
 
 public class LayerController : MonoBehaviour
 {
@@ -17,7 +20,7 @@ public class LayerController : MonoBehaviour
 }
 
 #region << CustomInspector >>
-
+#if UNITY_EDITOR 
 [CustomEditor(typeof(LayerController))]
 public class LayerManagerEditor : Editor
 {
@@ -65,4 +68,5 @@ public class LayerManagerEditor : Editor
         }
     }
 }
+#endif
 #endregion

@@ -37,6 +37,9 @@ public class Roulette : MonoBehaviour
     [SerializeField] private Collider Activator;
     public TextMeshProUGUI CoinCounter;
 
+    public int timer;
+    public int MaxSpinTime;
+
     private void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -58,6 +61,17 @@ public class Roulette : MonoBehaviour
                 Rolling = false; //pretend that the rolling is stopped 
             }
         }
+    }
+
+    IEnumerator SpinTimer()
+    {
+        while (timer <= MaxSpinTime)
+        {
+            yield return new WaitForSeconds(1f);
+            timer++;
+        }
+
+        timer = 0;
     }
 
     public void SpinNormally()
@@ -107,6 +121,7 @@ public class Roulette : MonoBehaviour
         Rolling = true; //let the update method know to start slowing the spin
         Accelerating = false;
         bonusChosen = false;
+        StartCoroutine(SpinTimer());
     }
 
     private float RandomFullSpeed()
@@ -116,7 +131,7 @@ public class Roulette : MonoBehaviour
 
     private void SlowTheSpin()
     {
-        if (body.angularVelocity.y <= minSpinSpeed) //if the spin gets real slow 
+        if (body.angularVelocity.y <= minSpinSpeed || timer >= MaxSpinTime) //if the spin gets real slow 
         {
             body.angularVelocity = Vector3.zero; //stop the spin
 

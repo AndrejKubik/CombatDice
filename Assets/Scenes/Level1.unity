@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65182158}
   - component: {fileID: 65182159}
+  - component: {fileID: 65182160}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -172,6 +173,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpinCamera: {fileID: 344098950}
   CameraEffect: {fileID: 1329739695}
+--- !u!114 &65182160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65182157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b0b194461efb94e84dffcdd2ba3228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &88024661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2353,11 @@ PrefabInstance:
       propertyPath: Selector
       value: 
       objectReference: {fileID: 1972295405}
+    - target: {fileID: 1317587420303519310, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
+        type: 3}
+      propertyPath: MaxSpinTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1568303504354412938, guid: 8a10c70050d7dd742b0977bb52f8c0f6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2502,6 +2520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760826137752147745, guid: a5a631e46fbb3134fb94ed3e471e0d67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9108591804675649798, guid: a5a631e46fbb3134fb94ed3e471e0d67,
         type: 3}

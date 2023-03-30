@@ -944,7 +944,7 @@ PrefabInstance:
     - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
       propertyPath: CoinProgressGoal
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 12805400068328263, guid: 0f3fb5cd18962af46bfa6342a02af862,
         type: 3}
