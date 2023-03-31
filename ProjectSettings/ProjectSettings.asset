@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Double-AY
+  companyName: DoubleAY
   productName: Fortune Frenzy
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -155,19 +155,20 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DoubleAY.FortuneFrenzy
+    Android: com.doubleay.fortunefrenzy
     Standalone: com.UnityTechnologies.com.unity.template-starter-kit
+    iPhone: com.doubleay.fortunefrenzy
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 0
+  AndroidMinSdkVersion: 23
+  AndroidTargetSdkVersion: 31
   AndroidPreferredInstallLocation: 1
   aotOptions: 
-  stripEngineCode: 1
+  stripEngineCode: 0
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -241,12 +242,12 @@ PlayerSettings:
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
-  useCustomMainGradleTemplate: 0
-  useCustomLauncherGradleManifest: 0
-  useCustomBaseGradleTemplate: 0
+  useCustomMainGradleTemplate: 1
+  useCustomLauncherGradleManifest: 1
+  useCustomBaseGradleTemplate: 1
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -780,18 +781,22 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: TTP_REWARDED_INTERSTITIALS;TTP_REWARDED_ADS;TTP_POPUPMGR;TTP_PROMOTION;TTP_GAMEPROGRESSION;TTP_PRIVACY_SETTINGS;TTP_CRASHTOOL;TTP_APPSFLYER;TTP_RATEUS;TTP_BANNERS;TTP_SHARE;TTP_INTERSTITIALS;TTP_OPENADS;TTP_ANALYTICS
+    iPhone: TTP_REWARDED_INTERSTITIALS;TTP_REWARDED_ADS;TTP_POPUPMGR;TTP_PROMOTION;TTP_GAMEPROGRESSION;TTP_PRIVACY_SETTINGS;TTP_CRASHTOOL;TTP_APPSFLYER;TTP_RATEUS;TTP_BANNERS;TTP_SHARE;TTP_INTERSTITIALS;TTP_OPENADS;TTP_ANALYTICS
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Android: 0
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
+  selectedPlatform: 3
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 0

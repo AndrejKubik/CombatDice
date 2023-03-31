@@ -457,6 +457,16 @@ PrefabInstance:
       propertyPath: Player
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2284570803674805738, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: MoveRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284570803674805738, guid: e3ee85beb404ae04aa63ac3e4f393911,
+        type: 3}
+      propertyPath: ComputerMoveDuration
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2352786825098639343, guid: e3ee85beb404ae04aa63ac3e4f393911,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
