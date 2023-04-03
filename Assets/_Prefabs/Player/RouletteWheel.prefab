@@ -1512,17 +1512,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rolling: 0
   Accelerating: 0
-  maxSpinFullSpeed: 30
-  minSpinFullSpeed: 20
+  maxSpinFullSpeed: 15
+  minSpinFullSpeed: 10
   slowSpinMaxSpeed: 5
   spinAccelerationStrength: 20
   minSlowStrength: 0.05
-  maxSlowStrength: 2
+  maxSlowStrength: 1
   rollOverallSpeed: 3
   minSpinSpeed: 0.15
   Selector: {fileID: 0}
   Activator: {fileID: 1317587421564653504}
   CoinCounter: {fileID: 0}
+  timer: 0
+  MaxSpinTime: 3
 --- !u!1 &2306034720372889494
 GameObject:
   m_ObjectHideFlags: 0

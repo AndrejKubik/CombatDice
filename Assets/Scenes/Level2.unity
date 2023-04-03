@@ -801,6 +801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 457104292636977705, guid: 60cdb7975d458d9478fd880756016a66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 944670988067319955, guid: 60cdb7975d458d9478fd880756016a66,
         type: 3}
       propertyPath: m_RootOrder
@@ -2233,7 +2238,7 @@ Transform:
   m_GameObject: {fileID: 1840708652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 3.6615376, y: 1.4307753, z: 1.7014728}
+  m_LocalScale: {x: 6.112571, y: 1.4307753, z: 1.7014728}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1520606331}
@@ -2607,6 +2612,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 231096893, guid: a5a631e46fbb3134fb94ed3e471e0d67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 359306149, guid: a5a631e46fbb3134fb94ed3e471e0d67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 359306150, guid: a5a631e46fbb3134fb94ed3e471e0d67, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -199.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 359306150, guid: a5a631e46fbb3134fb94ed3e471e0d67, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 557.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4028634768242035096, guid: a5a631e46fbb3134fb94ed3e471e0d67,
         type: 3}
       propertyPath: m_Name

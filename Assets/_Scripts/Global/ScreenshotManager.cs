@@ -9,8 +9,10 @@ public class ScreenshotManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            counter++;
-            ScreenCapture.CaptureScreenshot("Screenshot " + counter + ".png");
+            //counter++;
+            //ScreenCapture.CaptureScreenshot("Screenshot " + counter + ".png");
+
+            Roulette.instance.StopTheSpin();
         }
     }
 }

@@ -133,16 +133,21 @@ public class Roulette : MonoBehaviour
     {
         if (body.angularVelocity.y <= minSpinSpeed || timer >= MaxSpinTime) //if the spin gets real slow 
         {
-            body.angularVelocity = Vector3.zero; //stop the spin
-
-            if(!bonusChosen)
-            {
-                Selector.ActivateTargetedBonus(); //activate the bonus below the selector
-                bonusChosen = true;
-            }
+            StopTheSpin();
         }
         else body.angularDrag = Mathf.MoveTowards(body.angularDrag, maxSlowStrength, rollOverallSpeed * Time.deltaTime);
         //if the roulette is still spinning nice and fast, increase the slowing strength gradually  
+    }
+
+    public void StopTheSpin()
+    {
+        body.angularVelocity = Vector3.zero; //stop the spin
+
+        if (!bonusChosen)
+        {
+            Selector.ActivateTargetedBonus(); //activate the bonus below the selector
+            bonusChosen = true;
+        }
     }
 
     public void ReactivateSpinOption()

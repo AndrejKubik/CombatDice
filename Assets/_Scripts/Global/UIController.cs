@@ -54,8 +54,8 @@ public class UIController : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0) SceneManager.LoadScene(1);
-        else SceneManager.LoadScene(0);
+        if (SceneManager.GetActiveScene().buildIndex == 1) SceneManager.LoadScene(2);
+        else SceneManager.LoadScene(1);
     }
 
     public void RestartLevel()
