@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class FighterMovement : MonoBehaviour
 {
+    public bool PlayerFighter;
+
     public bool InEnemyBase;
     public Transform AttackTarget;
     public float AttackMoveSpeed;

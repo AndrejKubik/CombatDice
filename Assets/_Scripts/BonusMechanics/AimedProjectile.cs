@@ -63,7 +63,7 @@ public class AimedProjectile : MonoBehaviour
         Vector3 particleSpawnPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
         Instantiate(ImpactParticlesPrefab, particleSpawnPosition, transform.rotation);
         Time.timeScale = 1f;
-        SoundManager.instance.PlayBombSound();
+        
         PlayerCannon.ToggleCoinProgressBar(true);
         CameraControl.instance.ToggleSlowMotion(false);
 
@@ -89,6 +89,8 @@ public class AimedProjectile : MonoBehaviour
 
     private void Explode()
     {
+        SoundManager.instance.PlayBombSound();
+
         for (int i = 0; i < targetMarker.UnitsInRange.Count; i++)
         {
             Destroy(targetMarker.UnitsInRange[i]);

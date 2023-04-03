@@ -5,6 +5,8 @@ using UnityEngine;
 public class MultiplierGate : MonoBehaviour
 {
     [SerializeField] private int multiplierValue;
+    [SerializeField] private int charges;
+    private int chargesSpent;
 
     #region << Drag and Drop >>
     private bool placed;
@@ -26,8 +28,13 @@ public class MultiplierGate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         FighterMovement fighter = other.GetComponent<FighterMovement>();
+        if (fighter && !fighter.Multiplied && fighter.PlayerFighter)
+        {
+            fighter.Multiply(multiplierValue);
+            chargesSpent++;
+        }
 
-        if (fighter && !fighter.Multiplied) fighter.Multiply(multiplierValue);
+        if (chargesSpent >= charges) Destroy(gameObject);
     }
 
     private void OnTriggerExit(Collider other)

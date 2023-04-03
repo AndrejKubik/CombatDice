@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ea85d6bace13c42a69bd06f878f40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerFighter: 1
   InEnemyBase: 0
   AttackTarget: {fileID: 0}
   AttackMoveSpeed: 1

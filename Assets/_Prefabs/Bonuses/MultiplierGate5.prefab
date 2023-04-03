@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplierValue: 5
+  charges: 5
   dragHeightOffset: 3
   placementIndicator: {fileID: 454593349336712068}
 --- !u!1001 &1429272132417984836
